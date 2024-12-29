@@ -32,7 +32,7 @@ export const Hero = () => {
             <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
               Emergency Service
             </Button>
-            <Button size="lg" variant="outline" className="border-blue-500 text-blue-500 hover:bg-white/20">
+            <Button size="lg" variant="outline" className="border-blue-400 text-blue-500 hover:bg-white/20">
               Get a Quote
             </Button>
           </div>
