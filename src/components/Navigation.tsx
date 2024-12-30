@@ -13,9 +13,9 @@ export const Navigation = () => {
           {/* Logo and brand */}
           <Link to="/" className="flex items-center space-x-2">
             <img
-              src="/lovable-uploads/6b4d1817-8c91-4db5-9784-737b0347e368.png"
+              src="/lovable-uploads/header-logo.png"
               alt="Melville's Plumbing"
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
             <span className="font-bold text-primary hidden sm:block">Melville's Plumbing</span>
           </Link>

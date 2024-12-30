@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const About = () => {
   return (
@@ -14,9 +15,11 @@ export const About = () => {
             dedicated to getting the job done right the first time. Whether it's a plumbing emergency or 
             a planned renovation, we're here to help.
           </p>
-          <Button variant="outline" size="lg">
-            Learn More About Us
-          </Button>
+          <Link to="/about">
+            <Button variant="outline" size="lg">
+              Learn More About Us
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

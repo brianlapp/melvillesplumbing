@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -31,11 +32,19 @@ export const Footer = () => {
 
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <div className="space-y-2">
-              <Button variant="link" className="text-white p-0 h-auto hover:underline">Home</Button>
-              <Button variant="link" className="text-white p-0 h-auto hover:underline">Services</Button>
-              <Button variant="link" className="text-white p-0 h-auto hover:underline">About Us</Button>
-              <Button variant="link" className="text-white p-0 h-auto hover:underline">Contact</Button>
+            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
+              <Link to="/">
+                <Button variant="link" className="text-white p-0 h-auto hover:underline">Home</Button>
+              </Link>
+              <Link to="/services">
+                <Button variant="link" className="text-white p-0 h-auto hover:underline">Services</Button>
+              </Link>
+              <Link to="/about">
+                <Button variant="link" className="text-white p-0 h-auto hover:underline">About Us</Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="link" className="text-white p-0 h-auto hover:underline">Contact</Button>
+              </Link>
             </div>
           </div>
 

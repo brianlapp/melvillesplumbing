@@ -19,6 +19,9 @@ export const Hero = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto"
         >
+          <span className="inline-block px-4 py-1 mb-6 text-white bg-green-600/80 rounded-full text-sm font-medium animate-fade-up">
+            Trusted Plumbing Experts in Windsor Since 2012
+          </span>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             Welcome to Melville's Plumbing
           </h1>
@@ -30,8 +33,11 @@ export const Hero = () => {
             Welcome to Melville's Plumbing! Owned and operated by Reis Melville, we're Windsor's trusted plumbing company. 
             With over a decade of experience since 2012, our honest, reliable, and highly skilled team is here to handle all your plumbing needs.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
-            Contact Us for a Free Quote
+          <Button 
+            size="lg" 
+            className="bg-green-600 hover:bg-green-700 text-white transition-transform hover:scale-105"
+          >
+            Get A Free Quote
           </Button>
         </motion.div>
       </div>

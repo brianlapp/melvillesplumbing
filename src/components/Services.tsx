@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, Droplet, Wrench } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -42,9 +43,11 @@ export const Services = () => {
                 <CardDescription>{service.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="outline" className="w-full">
-                  Learn More
-                </Button>
+                <Link to="/services">
+                  <Button variant="outline" className="w-full">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}
