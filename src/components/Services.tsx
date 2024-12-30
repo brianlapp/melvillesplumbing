@@ -44,7 +44,7 @@ export const Services = () => {
               </CardHeader>
               <CardContent>
                 <Link to="/services">
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full border-green-50">
                     Learn More
                   </Button>
                 </Link>
