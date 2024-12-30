@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, Facebook, Instagram } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 
@@ -51,8 +51,17 @@ export const Footer = () => {
           </div>
         </div>
       </footer>
-      <div className="py-4 text-center text-gray-600">
-        © 2024 Melville's Plumbing. All rights reserved.
+      <div className="py-6 text-center text-gray-600 bg-white">
+        <p className="text-lg font-medium mb-4">Honest. Reliable. Skilled. Since 2012.</p>
+        <div className="flex justify-center gap-4 mb-4">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+            <Facebook className="h-5 w-5" />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600">
+            <Instagram className="h-5 w-5" />
+          </a>
+        </div>
+        <p>© 2024 Melville's Plumbing. All rights reserved.</p>
       </div>
     </>
   );
