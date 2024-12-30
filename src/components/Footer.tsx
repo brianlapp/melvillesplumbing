@@ -6,10 +6,10 @@ export const Footer = () => {
   return (
     <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Info</h3>
-            <div className="space-y-2">
+            <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
                 <a href="tel:226-820-2394" className="hover:underline">226-820-2394</a>
@@ -18,6 +18,15 @@ export const Footer = () => {
                 <Mail className="h-4 w-4" />
                 <a href="mailto:melvillesplumbing@gmail.com" className="hover:underline">melvillesplumbing@gmail.com</a>
               </div>
+              <div className="flex gap-4 mt-4">
+                <a href="#" className="hover:text-secondary">
+                  <Facebook className="h-6 w-6" />
+                </a>
+                <a href="#" className="hover:text-secondary">
+                  <Instagram className="h-6 w-6" />
+                </a>
+              </div>
+              <p className="text-sm italic">Honest. Reliable. Skilled. Since 2012.</p>
             </div>
           </div>
 
@@ -46,19 +55,6 @@ export const Footer = () => {
                 <Button variant="link" className="text-white p-0 h-auto hover:underline">Contact</Button>
               </Link>
             </div>
-          </div>
-
-          <div>
-            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-            <div className="flex gap-4">
-              <a href="#" className="hover:text-secondary">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="hover:text-secondary">
-                <Instagram className="h-6 w-6" />
-              </a>
-            </div>
-            <p className="mt-4 text-sm">Honest. Reliable. Skilled. Since 2012.</p>
           </div>
         </div>
       </div>
