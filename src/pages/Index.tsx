@@ -6,6 +6,7 @@ import { Gallery } from "@/components/Gallery";
 import { Contact } from "@/components/Contact";
 import { ContactCTA } from "@/components/ContactCTA";
 import { Footer } from "@/components/Footer";
+import { Navigation } from "@/components/Navigation";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+      <Navigation />
       <Hero />
       <Services />
       <About />

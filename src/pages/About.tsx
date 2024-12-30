@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Navigation } from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/Footer";
@@ -11,6 +12,7 @@ const AboutPage = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+      <Navigation />
       <main className="min-h-screen">
         <section className="py-20">
           <div className="container mx-auto px-4">
