@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/Footer";
-import { CheckCircle2, Tool, Wrench, Droplet, Home, ShowerHead, PipeOff, Pipeline, Construction, Shield, Trash2 } from "lucide-react";
+import { CheckCircle2, Wrench, Droplet, Home, ShowerHead, Shield, Trash2 } from "lucide-react";
 
 const services = [
   {
-    icon: Tool,
+    icon: Wrench,
     title: "Emergency Plumbing Services",
     description: "24/7 availability for burst pipes, leaks, and other plumbing emergencies.",
   },
@@ -31,22 +31,22 @@ const services = [
     description: "Installation, repair, and maintenance for all types of water heaters.",
   },
   {
-    icon: PipeOff,
+    icon: Droplet,
     title: "Leak Detection & Repair",
     description: "Advanced techniques to locate and fix leaks quickly.",
   },
   {
-    icon: Tool,
+    icon: Wrench,
     title: "Fixture Installation & Repair",
     description: "Professional installation and repair of all plumbing fixtures.",
   },
   {
-    icon: Pipeline,
+    icon: Wrench,
     title: "Pipe Repair & Replacement",
     description: "Comprehensive pipe services from minor repairs to full replacements.",
   },
   {
-    icon: Construction,
+    icon: Wrench,
     title: "Sewer Line Services",
     description: "Complete sewer line inspection, repair, and replacement services.",
   },
