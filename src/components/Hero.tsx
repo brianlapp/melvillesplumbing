@@ -6,7 +6,7 @@ export const Hero = () => {
     <section 
       className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
       style={{
-        backgroundImage: "url('/lovable-uploads/cta-bg-1.jpg')",
+        backgroundImage: 'url("/lovable-uploads/cta-bg-1.jpg")',
       }}
     >
       {/* Dark overlay */}
