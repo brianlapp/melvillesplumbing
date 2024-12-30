@@ -34,7 +34,7 @@ export const Hero = () => {
             With over a decade of experience since 2012, our honest, reliable, and highly skilled team is here to handle all your plumbing needs.
           </p>
           <Button 
-            size="lg" 
+            size="xl" 
             className="bg-green-600 hover:bg-green-700 text-white transition-transform hover:scale-105"
           >
             Get A Free Quote
