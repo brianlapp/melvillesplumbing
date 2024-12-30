@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Droplet, PumpIcon } from "lucide-react";
+import { Clock, Droplet, Wrench } from "lucide-react";
 
 const services = [
   {
@@ -14,7 +14,7 @@ const services = [
     description: "Expert installation, repair, and replacement for tank and tankless water heaters.",
   },
   {
-    icon: PumpIcon,
+    icon: Wrench,
     title: "Sump Pump Installation & Maintenance",
     description: "Keep your basement dry and prevent flooding.",
   },
