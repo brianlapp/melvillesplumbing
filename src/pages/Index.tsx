@@ -1,7 +1,10 @@
+import { motion } from "framer-motion";
 import { Hero } from "@/components/Hero";
+import { Services } from "@/components/Services";
+import { About } from "@/components/About";
 import { Gallery } from "@/components/Gallery";
 import { Contact } from "@/components/Contact";
-import { motion } from "framer-motion";
+import { ContactCTA } from "@/components/ContactCTA";
 
 const Index = () => {
   return (
@@ -11,7 +14,10 @@ const Index = () => {
       transition={{ duration: 0.5 }}
     >
       <Hero />
+      <Services />
+      <About />
       <Gallery />
+      <ContactCTA />
       <Contact />
     </motion.div>
   );

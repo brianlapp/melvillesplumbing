@@ -19,23 +19,20 @@ export const Hero = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="inline-block px-4 py-1 mb-6 text-white bg-green-600 rounded-full text-sm font-medium animate-fade-up">
-            Professional Plumbing Services
-          </span>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-up">
-            Expert Plumbing Solutions for Your Home
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+            Welcome to Melville's Plumbing
           </h1>
-          <p className="text-xl text-gray-200 mb-8 animate-fade-up">
-            Available 24/7 for all your plumbing needs
+          <p className="text-xl text-gray-200 mb-2">
+            Your Trusted Plumbing Experts in Windsor, Ontario
           </p>
-          <div className="flex gap-4 justify-center animate-fade-up">
-            <Button size="lg" className="bg-green-600 hover:bg-green-700 text-white">
-              Emergency Service
-            </Button>
-            <Button size="lg" variant="outline" className="border-blue-400 text-blue-500 hover:bg-white/20">
-              Get a Quote
-            </Button>
-          </div>
+          <p className="text-lg text-gray-300 mb-6">Since 2012</p>
+          <p className="text-gray-200 mb-8">
+            Welcome to Melville's Plumbing! Owned and operated by Reis Melville, we're Windsor's trusted plumbing company. 
+            With over a decade of experience since 2012, our honest, reliable, and highly skilled team is here to handle all your plumbing needs.
+          </p>
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white">
+            Contact Us for a Free Quote
+          </Button>
         </motion.div>
       </div>
     </section>
