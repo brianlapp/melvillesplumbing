@@ -10,14 +10,13 @@ export const Navigation = () => {
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Logo and brand */}
-          <Link to="/" className="flex items-center space-x-2">
+          {/* Logo only */}
+          <Link to="/" className="flex items-center">
             <img
               src="/lovable-uploads/header-logo.png"
               alt="Melville's Plumbing"
               className="h-12 w-auto"
             />
-            <span className="font-bold text-primary hidden sm:block">Melville's Plumbing</span>
           </Link>
 
           {/* Desktop navigation */}

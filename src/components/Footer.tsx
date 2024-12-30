@@ -32,7 +32,7 @@ export const Footer = () => {
 
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-            <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
+            <div className="flex flex-col space-y-2">
               <Link to="/">
                 <Button variant="link" className="text-white p-0 h-auto hover:underline">Home</Button>
               </Link>
