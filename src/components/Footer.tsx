@@ -6,19 +6,19 @@ export const Footer = () => {
   return (
     <footer className="bg-primary text-white py-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Info</h3>
             <div className="space-y-4">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 justify-center">
                 <Phone className="h-4 w-4" />
                 <a href="tel:226-820-2394" className="hover:underline">226-820-2394</a>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 justify-center">
                 <Mail className="h-4 w-4" />
                 <a href="mailto:melvillesplumbing@gmail.com" className="hover:underline">melvillesplumbing@gmail.com</a>
               </div>
-              <div className="flex gap-4 mt-4">
+              <div className="flex gap-4 mt-4 justify-center">
                 <a href="#" className="hover:text-secondary">
                   <Facebook className="h-6 w-6" />
                 </a>
