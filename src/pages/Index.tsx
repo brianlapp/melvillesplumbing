@@ -4,7 +4,6 @@ import { Services } from "@/components/Services";
 import { About } from "@/components/About";
 import { Gallery } from "@/components/Gallery";
 import { Contact } from "@/components/Contact";
-import { ContactCTA } from "@/components/ContactCTA";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 
@@ -20,7 +19,6 @@ const Index = () => {
       <Services />
       <About />
       <Gallery />
-      <ContactCTA />
       <Contact />
       <Footer />
     </motion.div>
