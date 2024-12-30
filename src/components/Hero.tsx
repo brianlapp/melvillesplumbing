@@ -26,9 +26,9 @@ export const Hero = () => {
             Welcome to Melville's Plumbing
           </h1>
           <p className="text-xl text-gray-200 mb-2">
-            Your Trusted Plumbing Experts in Windsor, Ontario
+            Your Plumbing Experts in Windsor, Ontario
           </p>
-          <p className="text-lg text-gray-300 mb-6">Since 2012</p>
+          
           <p className="text-gray-200 mb-8">
             Welcome to Melville's Plumbing! Owned and operated by Reis Melville, we're Windsor's trusted plumbing company. 
             With over a decade of experience since 2012, our honest, reliable, and highly skilled team is here to handle all your plumbing needs.
