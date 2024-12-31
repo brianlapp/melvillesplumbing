@@ -30,9 +30,9 @@ export const Contact = () => {
             <Phone className="w-10 h-10 mx-auto mb-4 text-primary" />
             <h3 className="text-xl font-semibold mb-2">Call Us</h3>
             <p className="text-gray-600">Available 24/7</p>
-            <a href="tel:(555) 123-4567">
+            <a href="tel:226-820-2394">
               <Button variant="link" className="mt-4">
-                (555) 123-4567
+                226-820-2394
               </Button>
             </a>
           </Card>
@@ -41,9 +41,9 @@ export const Contact = () => {
             <Mail className="w-10 h-10 mx-auto mb-4 text-primary" />
             <h3 className="text-xl font-semibold mb-2">Email Us</h3>
             <p className="text-gray-600">Quick Response</p>
-            <a href="mailto:contact@example.com">
+            <a href="mailto:melvillesplumbing@gmail.com">
               <Button variant="link" className="mt-4">
-                contact@example.com
+                melvillesplumbing@gmail.com
               </Button>
             </a>
           </Card>
