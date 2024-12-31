@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Droplet, Wrench, Home, Shower, Search, Tool, Pipeline, TrashIcon, Shield } from "lucide-react";
+import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, TrashIcon, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 
 const services = [
@@ -20,7 +20,7 @@ const services = [
     description: "Expert installation, maintenance, and repair of sump pumps to protect your property from flooding.",
   },
   {
-    icon: Shower,
+    icon: Droplets,
     title: "Bathroom & Kitchen Renovations",
     description: "Professional plumbing services for your renovation projects, from fixture installation to pipe reconfiguration.",
   },
@@ -35,12 +35,12 @@ const services = [
     description: "State-of-the-art leak detection and efficient repair solutions to prevent water damage.",
   },
   {
-    icon: Tool,
+    icon: Wrench,
     title: "Fixture Installation & Repair",
     description: "Expert installation and repair of all plumbing fixtures to enhance your space's functionality.",
   },
   {
-    icon: Pipeline,
+    icon: PenLine,
     title: "Pipe Services",
     description: "Comprehensive pipe repair and replacement services to maintain your plumbing system's efficiency.",
   },
