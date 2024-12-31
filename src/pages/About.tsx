@@ -35,11 +35,12 @@ const AboutPage = () => {
                 Trusted Plumbing Experts in Windsor Since 2012
               </span>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                About Melville's Plumbing
+                About Us
               </h1>
               <p className="text-xl text-gray-200 mb-6">
-                Windsor's trusted name in plumbing services, delivering honest, reliable, 
-                and skilled plumbing solutions since 2012.
+                Welcome to Melville's Plumbing, Windsor's trusted name in plumbing services. 
+                Since 2012, we've been delivering honest, reliable, and skilled plumbing 
+                solutions to homes and businesses throughout Windsor and the surrounding areas.
               </p>
             </motion.div>
           </div>
