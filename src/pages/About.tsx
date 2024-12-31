@@ -17,12 +17,12 @@ const AboutPage = () => {
       <main className="min-h-screen">
         {/* Hero Section with updated styling */}
         <section 
-          className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
+          className="relative min-h-[30vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
           style={{
             backgroundImage: 'url("/lovable-uploads/hero-2.jpg")',
           }}
         >
-          <div className="absolute inset-0" style={{ backgroundColor: '#030636b0' }} />
+          <div className="absolute inset-0" style={{ backgroundColor: '#030636D9' }} />
           
           <div className="container mx-auto px-4 py-12 md:py-32 relative z-10">
             <motion.div
