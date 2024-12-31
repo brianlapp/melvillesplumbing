@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -33,12 +34,14 @@ export const Hero = () => {
             Welcome to Melville's Plumbing! Owned and operated by Reis Melville, we're Windsor's trusted plumbing company. 
             With over a decade of experience since 2012, our honest, reliable, and highly skilled team is here to handle all your plumbing needs.
           </p>
-          <Button 
-            size="xxl" 
-            className="bg-green-600 hover:bg-green-700 text-white transition-transform hover:scale-105"
-          >
-            Get A Free Quote
-          </Button>
+          <Link to="/contact">
+            <Button 
+              size="xxl" 
+              className="bg-green-600 hover:bg-green-700 text-white transition-transform hover:scale-105"
+            >
+              Get A Free Quote
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>

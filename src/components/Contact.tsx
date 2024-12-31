@@ -11,7 +11,7 @@ export const Contact = () => {
             <img 
               src="/lovable-uploads/6b4d1817-8c91-4db5-9784-737b0347e368.png" 
               alt="Company Logo" 
-              className="mx-auto h-44 w-auto" // Changed from h-36 to h-44 and reduced padding from p-8 to p-4
+              className="mx-auto h-44 w-auto md:h-44 sm:h-32" 
             />
           </div>
           <span className="inline-block px-4 py-1 mb-4 text-primary bg-blue-50 rounded-full text-sm font-medium">
@@ -30,18 +30,22 @@ export const Contact = () => {
             <Phone className="w-10 h-10 mx-auto mb-4 text-primary" />
             <h3 className="text-xl font-semibold mb-2">Call Us</h3>
             <p className="text-gray-600">Available 24/7</p>
-            <Button variant="link" className="mt-4">
-              (555) 123-4567
-            </Button>
+            <a href="tel:(555) 123-4567">
+              <Button variant="link" className="mt-4">
+                (555) 123-4567
+              </Button>
+            </a>
           </Card>
 
           <Card className="p-6 text-center hover:shadow-lg transition-shadow">
             <Mail className="w-10 h-10 mx-auto mb-4 text-primary" />
             <h3 className="text-xl font-semibold mb-2">Email Us</h3>
             <p className="text-gray-600">Quick Response</p>
-            <Button variant="link" className="mt-4">
-              contact@example.com
-            </Button>
+            <a href="mailto:contact@example.com">
+              <Button variant="link" className="mt-4">
+                contact@example.com
+              </Button>
+            </a>
           </Card>
 
           <Card className="p-6 text-center hover:shadow-lg transition-shadow">

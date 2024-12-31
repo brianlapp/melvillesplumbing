@@ -10,14 +10,16 @@ export const Navigation = () => {
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Logo only */}
-          <Link to="/" className="flex items-center">
-            <img
-              src="/lovable-uploads/header-logo.png"
-              alt="Melville's Plumbing"
-              className="h-12 w-auto"
-            />
-          </Link>
+          {/* Logo with mobile centering */}
+          <div className="flex-1 md:flex-none">
+            <Link to="/" className="block md:inline-block">
+              <img
+                src="/lovable-uploads/header-logo.png"
+                alt="Melville's Plumbing"
+                className="h-12 w-auto mx-auto md:mx-0"
+              />
+            </Link>
+          </div>
 
           {/* Desktop navigation */}
           <div className="hidden md:flex space-x-4">

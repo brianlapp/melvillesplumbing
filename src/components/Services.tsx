@@ -43,7 +43,7 @@ export const Services = () => {
                 <CardDescription>{service.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <Link to="/services">
+                <Link to="/services#top">
                   <Button variant="outline" className="w-full">
                     Learn More
                   </Button>
