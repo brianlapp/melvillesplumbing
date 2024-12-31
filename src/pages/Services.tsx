@@ -1,9 +1,11 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Services as ServicesList } from "@/components/Services";
+import { Contact } from "@/components/Contact";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Card } from "@/components/ui/card";
 
 const ServicesPage = () => {
   return (
@@ -54,28 +56,28 @@ const ServicesPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center max-w-3xl mx-auto mb-8"
+            className="text-center max-w-3xl mx-auto mb-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Why Choose Melville's Plumbing?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-              <div className="p-4">
-                <h3 className="font-semibold mb-2">✓ Experienced Team</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-semibold text-xl mb-3 text-primary">✓ Experienced Team</h3>
                 <p className="text-gray-600">With over a decade of hands-on experience, we bring expertise to every job.</p>
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold mb-2">✓ Honest & Reliable</h3>
+              </Card>
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-semibold text-xl mb-3 text-primary">✓ Honest & Reliable</h3>
                 <p className="text-gray-600">Our reputation is built on trust and transparency.</p>
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold mb-2">✓ Locally Owned</h3>
+              </Card>
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-semibold text-xl mb-3 text-primary">✓ Locally Owned</h3>
                 <p className="text-gray-600">We understand Windsor's unique plumbing needs and challenges.</p>
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold mb-2">✓ Guaranteed Satisfaction</h3>
+              </Card>
+              <Card className="p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-semibold text-xl mb-3 text-primary">✓ Guaranteed Satisfaction</h3>
                 <p className="text-gray-600">We stand behind our work to ensure your peace of mind.</p>
-              </div>
+              </Card>
             </div>
           </motion.div>
         </div>
@@ -84,52 +86,8 @@ const ServicesPage = () => {
       {/* Services List Component */}
       <ServicesList />
 
-      {/* Contact Section */}
-      <section className="py-16 bg-primary text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Get in Touch
-              </h2>
-              <p className="text-xl mb-8">
-                Ready to experience professional plumbing services? Contact us today for a consultation 
-                or emergency service. We're here to help with all your plumbing needs.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-                <div className="text-center">
-                  <h3 className="font-semibold mb-2">Call Us</h3>
-                  <p>226-820-2394</p>
-                  <p className="text-sm">Available 24/7</p>
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold mb-2">Email Us</h3>
-                  <p>melvillesplumbing@gmail.com</p>
-                  <p className="text-sm">Quick Response</p>
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold mb-2">Business Hours</h3>
-                  <p>Mon - Fri: 8am - 6pm</p>
-                  <p className="text-sm">24/7 Emergency Service</p>
-                </div>
-              </div>
-              <Link to="/contact">
-                <Button 
-                  size="lg" 
-                  variant="secondary"
-                  className="bg-white text-primary hover:bg-gray-100"
-                >
-                  Contact Us Now
-                </Button>
-              </Link>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* Contact Component */}
+      <Contact />
 
       <Footer />
     </motion.div>
