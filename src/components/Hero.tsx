@@ -20,7 +20,7 @@ export const Hero = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="inline-block px-4 py-1 mb-6 text-white bg-green-600/80 rounded-full text-sm font-medium animate-fade-up">
+          <span className="inline-block px-4 py-1 mb-6 md:mb-6 mt-[-50px] md:mt-0 text-white bg-green-600/80 rounded-full text-sm font-medium animate-fade-up">
             Trusted Plumbing Experts in Windsor Since 2012
           </span>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
