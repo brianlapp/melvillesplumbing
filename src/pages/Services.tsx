@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
+import { CheckCircle2 } from "lucide-react";
 
 const ServicesPage = () => {
   return (
@@ -50,7 +51,7 @@ const ServicesPage = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -63,28 +64,52 @@ const ServicesPage = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="p-6 hover:shadow-lg transition-shadow">
-                <h3 className="font-semibold text-xl mb-3 text-primary">✓ Experienced Team</h3>
-                <p className="text-gray-600">With over a decade of hands-on experience, we bring expertise to every job.</p>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0" />
+                  <div className="text-left">
+                    <h3 className="font-semibold text-xl mb-2 text-primary">Experienced Team</h3>
+                    <p className="text-gray-600">With over a decade of hands-on experience, we bring expertise to every job.</p>
+                  </div>
+                </div>
               </Card>
               <Card className="p-6 hover:shadow-lg transition-shadow">
-                <h3 className="font-semibold text-xl mb-3 text-primary">✓ Honest & Reliable</h3>
-                <p className="text-gray-600">Our reputation is built on trust and transparency.</p>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0" />
+                  <div className="text-left">
+                    <h3 className="font-semibold text-xl mb-2 text-primary">Honest & Reliable</h3>
+                    <p className="text-gray-600">Our reputation is built on trust and transparency.</p>
+                  </div>
+                </div>
               </Card>
               <Card className="p-6 hover:shadow-lg transition-shadow">
-                <h3 className="font-semibold text-xl mb-3 text-primary">✓ Locally Owned</h3>
-                <p className="text-gray-600">We understand Windsor's unique plumbing needs and challenges.</p>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0" />
+                  <div className="text-left">
+                    <h3 className="font-semibold text-xl mb-2 text-primary">Locally Owned</h3>
+                    <p className="text-gray-600">We understand Windsor's unique plumbing needs and challenges.</p>
+                  </div>
+                </div>
               </Card>
               <Card className="p-6 hover:shadow-lg transition-shadow">
-                <h3 className="font-semibold text-xl mb-3 text-primary">✓ Guaranteed Satisfaction</h3>
-                <p className="text-gray-600">We stand behind our work to ensure your peace of mind.</p>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0" />
+                  <div className="text-left">
+                    <h3 className="font-semibold text-xl mb-2 text-primary">Guaranteed Satisfaction</h3>
+                    <p className="text-gray-600">We stand behind our work to ensure your peace of mind.</p>
+                  </div>
+                </div>
               </Card>
             </div>
           </motion.div>
         </div>
       </section>
 
+      <hr className="border-gray-200 max-w-7xl mx-auto" />
+
       {/* Services List Component */}
-      <ServicesList />
+      <div className="bg-blue-50">
+        <ServicesList />
+      </div>
 
       {/* Contact Component */}
       <Contact />
