@@ -14,9 +14,7 @@ const projectImages = [
   "/lovable-uploads/IMG_3139.jpeg",
   "/lovable-uploads/IMG_3308.jpeg",
   "/lovable-uploads/IMG_3696.jpeg",
-  "/lovable-uploads/IMG_5273.jpg",
-  "/lovable-uploads/IMG_8857.jpg",
-  "/lovable-uploads/IMG_8960.jpeg"
+  "/lovable-uploads/IMG_5273.jpg"
 ];
 
 export const Gallery = () => {
