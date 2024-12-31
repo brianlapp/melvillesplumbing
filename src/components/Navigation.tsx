@@ -10,13 +10,13 @@ export const Navigation = () => {
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Logo with mobile centering */}
-          <div className="flex-1 md:flex-none">
-            <Link to="/" className="block md:inline-block">
+          {/* Logo with proper mobile centering */}
+          <div className="flex-1 md:flex-none flex justify-center md:justify-start">
+            <Link to="/" className="block">
               <img
                 src="/lovable-uploads/header-logo.png"
                 alt="Melville's Plumbing"
-                className="h-12 w-auto mx-auto md:mx-0"
+                className="h-12 w-auto"
               />
             </Link>
           </div>
@@ -40,7 +40,7 @@ export const Navigation = () => {
           {/* Mobile menu button */}
           <Button
             variant="ghost"
-            className="md:hidden"
+            className="md:hidden absolute right-4"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
