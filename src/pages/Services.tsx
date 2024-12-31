@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/Footer";
 import { CheckCircle2, Wrench, Droplet, Home, ShowerHead, PenLine, Shield, Trash2 } from "lucide-react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const services = [
   {
@@ -67,8 +69,17 @@ const recentProjects = [
 ];
 
 const ServicesPage = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash === '#top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [hash]);
+
   return (
     <motion.div
+      id="top"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
