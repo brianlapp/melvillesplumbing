@@ -36,23 +36,25 @@ const ServicesPage = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Plumbing Services in Windsor
             </h1>
-            <p className="text-xl text-gray-200 mb-8">
+            <p className="text-lg text-gray-200 mb-8 leading-relaxed">
               Welcome to the Melville's Plumbing Services page! As Windsor's trusted plumbing experts, 
               we provide a full range of professional services to meet your residential and commercial 
-              plumbing needs.
+              plumbing needs. Whether you're facing an emergency or planning a renovation, our experienced 
+              team delivers reliable, high-quality solutions tailored to you. Since 2012, Melville's Plumbing 
+              has been proudly serving Windsor and surrounding areas with honesty, skill, and dedication.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center max-w-3xl mx-auto mb-12"
+            className="text-center max-w-3xl mx-auto mb-8"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Why Choose Melville's Plumbing?
@@ -82,35 +84,50 @@ const ServicesPage = () => {
       {/* Services List Component */}
       <ServicesList />
 
-      {/* Service Areas Section */}
-      <section className="py-16 bg-white">
+      {/* Contact Section */}
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Serving Windsor and Beyond
-            </h2>
-            <p className="text-gray-600 mb-8">
-              Melville's Plumbing proudly serves Windsor and surrounding communities. 
-              We understand the unique plumbing challenges in our region, and we're here 
-              to provide personalized solutions that last.
-            </p>
-            <p className="text-gray-600 mb-8">
-              <strong>Local Areas Served:</strong> Windsor, Tecumseh, LaSalle, Amherstburg, and more.
-            </p>
-            <Link to="/contact">
-              <Button 
-                size="lg" 
-                className="bg-green-600 hover:bg-green-700 text-white"
-              >
-                Get In Touch
-              </Button>
-            </Link>
-          </motion.div>
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Get in Touch
+              </h2>
+              <p className="text-xl mb-8">
+                Ready to experience professional plumbing services? Contact us today for a consultation 
+                or emergency service. We're here to help with all your plumbing needs.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div className="text-center">
+                  <h3 className="font-semibold mb-2">Call Us</h3>
+                  <p>226-820-2394</p>
+                  <p className="text-sm">Available 24/7</p>
+                </div>
+                <div className="text-center">
+                  <h3 className="font-semibold mb-2">Email Us</h3>
+                  <p>melvillesplumbing@gmail.com</p>
+                  <p className="text-sm">Quick Response</p>
+                </div>
+                <div className="text-center">
+                  <h3 className="font-semibold mb-2">Business Hours</h3>
+                  <p>Mon - Fri: 8am - 6pm</p>
+                  <p className="text-sm">24/7 Emergency Service</p>
+                </div>
+              </div>
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  variant="secondary"
+                  className="bg-white text-primary hover:bg-gray-100"
+                >
+                  Contact Us Now
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
         </div>
       </section>
 
