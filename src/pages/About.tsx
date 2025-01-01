@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/Footer";
 import { Heart, Shield, Star, Users, CheckCircle, Building, HomeIcon, ThumbsUp } from "lucide-react";
 import { Contact } from "@/components/Contact";
+import { ContactCTA } from "@/components/ContactCTA";
 
 const AboutPage = () => {
   return (

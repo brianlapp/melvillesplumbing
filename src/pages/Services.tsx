@@ -4,9 +4,10 @@ import { Services as ServicesList } from "@/components/Services";
 import { Contact } from "@/components/Contact";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ContactCTA } from "@/components/ContactCTA";
 
 const ServicesPage = () => {
   return (
