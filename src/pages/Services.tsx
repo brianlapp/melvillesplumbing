@@ -112,6 +112,7 @@ const ServicesPage = () => {
       </div>
 
       <EmergencyCard />
+      <ContactCTA />
       <Footer />
     </motion.div>
   );

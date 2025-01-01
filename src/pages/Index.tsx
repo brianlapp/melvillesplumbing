@@ -6,6 +6,7 @@ import { Gallery } from "@/components/Gallery";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
 import { EmergencyCard } from "@/components/EmergencyCard";
+import { ContactCTA } from "@/components/ContactCTA";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <About />
       <Gallery />
       <EmergencyCard />
+      <ContactCTA />
       <Footer />
     </motion.div>
   );
