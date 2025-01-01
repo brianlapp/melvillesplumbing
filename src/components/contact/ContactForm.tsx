@@ -40,14 +40,14 @@ export const ContactForm = () => {
       <h2 className="text-3xl font-bold text-center mb-8 text-primary">Contact Us</h2>
       <Card className="p-6 md:p-8 bg-white shadow-lg">
         <form 
-          name="Contact-form" 
-          method="POST" 
+          name="contact"
+          method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit} 
           className="space-y-6"
         >
-          <input type="hidden" name="form-name" value="Contact-form" />
+          <input type="hidden" name="form-name" value="contact" />
           <p hidden>
             <label>
               Don't fill this out if you're human: <input name="bot-field" />
