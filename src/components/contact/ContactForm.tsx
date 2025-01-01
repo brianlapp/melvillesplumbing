@@ -42,7 +42,7 @@ export const ContactForm = () => {
         <form 
           name="Contact-form" 
           method="POST" 
-          netlify
+          data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit} 
           className="space-y-6"
