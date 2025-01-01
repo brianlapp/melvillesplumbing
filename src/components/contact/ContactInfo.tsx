@@ -6,22 +6,6 @@ import { Button } from "@/components/ui/button";
 export const ContactInfo = () => {
   return (
     <>
-      <section className="py-12 bg-primary text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Contact Us Today!
-            </h2>
-            <p className="text-xl mb-8">
-              Ready to experience the best plumbing services in Windsor? Contact us today for a free quote or emergency service!
-            </p>
-            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
-              Get in Touch
-            </Button>
-          </div>
-        </div>
-      </section>
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
         <Card className="p-6 text-center hover:shadow-lg transition-shadow bg-white">
           <Phone className="w-10 h-10 mx-auto mb-4 text-primary" />
