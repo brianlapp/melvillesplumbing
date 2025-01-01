@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Phone, Clock, Mail, MapPin } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 
 export const Contact = () => {
   return (
@@ -27,6 +30,49 @@ export const Contact = () => {
           <p className="text-gray-600 max-w-2xl mx-auto">
             We're just a call or click away! Reach out to us via phone, email, or by using our convenient contact form.
           </p>
+        </div>
+
+        <div className="max-w-2xl mx-auto mb-16">
+          <Card className="p-6">
+            <form name="contact" method="POST" data-netlify="true" className="space-y-6">
+              <div className="space-y-2">
+                <Label htmlFor="name">Your Name</Label>
+                <Input type="text" id="name" name="name" required placeholder="John Doe" />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="email">Your Email</Label>
+                <Input type="email" id="email" name="email" required placeholder="john@example.com" />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="phone">Your Phone Number</Label>
+                <Input type="tel" id="phone" name="phone" required placeholder="(226) 123-4567" />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="address">Your Address</Label>
+                <Input type="text" id="address" name="address" placeholder="123 Main St, Windsor, ON" />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="message">Message</Label>
+                <Textarea 
+                  id="message" 
+                  name="message" 
+                  required 
+                  placeholder="Please describe how we can help you..."
+                  className="min-h-[120px]"
+                />
+              </div>
+
+              <input type="hidden" name="form-name" value="contact" />
+              
+              <Button type="submit" className="w-full">
+                Submit Message
+              </Button>
+            </form>
+          </Card>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
