@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, TrashIcon, Shield, Broom } from "lucide-react";
+import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, TrashIcon, Shield, Trash2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -51,7 +51,7 @@ const services = [
     description: "Professional backflow prevention and testing services to protect your water supply.",
   },
   {
-    icon: Broom,
+    icon: Trash2,
     title: "Drain Cleaning",
     description: "Advanced drain cleaning solutions to clear blockages and maintain smooth water flow.",
   }
