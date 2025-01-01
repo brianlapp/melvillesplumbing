@@ -5,6 +5,7 @@ import { About } from "@/components/About";
 import { Gallery } from "@/components/Gallery";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
+import { EmergencyCard } from "@/components/EmergencyCard";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Services />
       <About />
       <Gallery />
+      <EmergencyCard />
       <Footer />
     </motion.div>
   );
