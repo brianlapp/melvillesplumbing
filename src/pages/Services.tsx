@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { ContactCTA } from "@/components/ContactCTA";
 
 const ServicesPage = () => {
   return (
@@ -121,3 +120,4 @@ const ServicesPage = () => {
 };
 
 export default ServicesPage;
+
