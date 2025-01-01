@@ -1,20 +1,9 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
-
-const NetlifyFormDetectionHTML = () => (
-  <form name="Contact-form" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-    <input type="text" name="name" />
-    <input type="email" name="email" />
-    <input type="tel" name="phone" />
-    <input type="text" name="address" />
-    <textarea name="message"></textarea>
-  </form>
-);
+import { ContactFormFields } from './form-fields/ContactFormFields';
+import { NetlifyFormDetection } from './form-fields/NetlifyFormDetection';
 
 export const ContactForm = () => {
   const { toast } = useToast();
@@ -47,7 +36,7 @@ export const ContactForm = () => {
 
   return (
     <div className="max-w-2xl mx-auto mb-16">
-      <NetlifyFormDetectionHTML />
+      <NetlifyFormDetection />
       <h2 className="text-3xl font-bold text-center mb-8 text-primary">Contact Us</h2>
       <Card className="p-6 md:p-8 bg-white shadow-lg">
         <form 
@@ -65,36 +54,7 @@ export const ContactForm = () => {
             </label>
           </p>
           
-          <div className="space-y-2">
-            <Label htmlFor="name">Your Name</Label>
-            <Input type="text" id="name" name="name" required placeholder="John Doe" className="w-full" />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="email">Your Email</Label>
-            <Input type="email" id="email" name="email" required placeholder="john@example.com" className="w-full" />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="phone">Your Phone Number</Label>
-            <Input type="tel" id="phone" name="phone" required placeholder="(226) 123-4567" className="w-full" />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="address">Your Address</Label>
-            <Input type="text" id="address" name="address" placeholder="123 Main St, Windsor, ON" className="w-full" />
-          </div>
-          
-          <div className="space-y-2">
-            <Label htmlFor="message">Message</Label>
-            <Textarea 
-              id="message" 
-              name="message" 
-              required 
-              placeholder="Please describe how we can help you..."
-              className="min-h-[120px] w-full"
-            />
-          </div>
+          <ContactFormFields />
           
           <Button type="submit" className="w-full">
             Submit Message
