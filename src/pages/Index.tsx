@@ -3,10 +3,9 @@ import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { About } from "@/components/About";
 import { Gallery } from "@/components/Gallery";
+import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { Navigation } from "@/components/Navigation";
-import { EmergencyCard } from "@/components/EmergencyCard";
-import { ContactCTA } from "@/components/ContactCTA";
 
 const Index = () => {
   return (
@@ -20,8 +19,7 @@ const Index = () => {
       <Services />
       <About />
       <Gallery />
-      <EmergencyCard />
-      <ContactCTA />
+      <Contact />
       <Footer />
     </motion.div>
   );
