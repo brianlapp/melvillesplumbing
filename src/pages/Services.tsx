@@ -1,7 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Services as ServicesList } from "@/components/Services";
-import { Contact } from "@/components/Contact";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -110,9 +109,6 @@ const ServicesPage = () => {
       <div className="bg-blue-50">
         <ServicesList />
       </div>
-
-      {/* Contact Component */}
-      <Contact />
 
       <Footer />
     </motion.div>

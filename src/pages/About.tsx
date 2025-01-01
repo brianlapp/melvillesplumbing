@@ -4,7 +4,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Footer } from "@/components/Footer";
 import { Heart, Shield, Star, Users, CheckCircle, Building, HomeIcon, ThumbsUp } from "lucide-react";
-import { Contact } from "@/components/Contact";
 
 const AboutPage = () => {
   return (
@@ -15,7 +14,7 @@ const AboutPage = () => {
     >
       <Navigation />
       <main className="min-h-screen">
-        {/* Hero Section with updated styling */}
+        {/* Hero Section */}
         <section 
           className="relative min-h-[30vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
           style={{
@@ -46,7 +45,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Our Story Section with Image */}
+        {/* Our Story Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -109,7 +108,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Core Values Section with Animation */}
+        {/* Core Values Section */}
         <motion.section 
           className="py-16 bg-blue-50"
           initial={{ opacity: 0 }}
@@ -266,8 +265,6 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <Contact />
         <Footer />
       </main>
     </motion.div>
