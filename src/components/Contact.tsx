@@ -4,8 +4,38 @@ import { Phone, Clock, Mail, MapPin } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { useToast } from "@/components/ui/use-toast";
 
 export const Contact = () => {
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+      
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We'll get back to you soon.",
+      });
+      
+      // Reset the form
+      (e.target as HTMLFormElement).reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      });
+    }
+  };
+
   return (
     <section>
       {/* Hero Section */}
@@ -41,7 +71,9 @@ export const Contact = () => {
         <div className="max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl font-bold text-center mb-8 text-primary">Contact Us</h2>
           <Card className="p-6">
-            <form name="contact" method="POST" data-netlify="true" className="space-y-6">
+            <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit} className="space-y-6">
+              <input type="hidden" name="form-name" value="contact" />
+              
               <div className="space-y-2">
                 <Label htmlFor="name">Your Name</Label>
                 <Input type="text" id="name" name="name" required placeholder="John Doe" />
@@ -72,8 +104,6 @@ export const Contact = () => {
                   className="min-h-[120px]"
                 />
               </div>
-
-              <input type="hidden" name="form-name" value="contact" />
               
               <Button type="submit" className="w-full">
                 Submit Message
