@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 
 export const Contact = () => {
   return (
-    <section className="py-20">
+    <section>
       {/* Hero Section */}
       <div 
         className="relative min-h-[30vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
@@ -37,8 +37,9 @@ export const Contact = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-16">
         <div className="max-w-2xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8 text-primary">Contact Us</h2>
           <Card className="p-6">
             <form name="contact" method="POST" data-netlify="true" className="space-y-6">
               <div className="space-y-2">
