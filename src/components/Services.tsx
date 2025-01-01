@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, TrashIcon, Shield } from "lucide-react";
+import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, TrashIcon, Shield, Broom } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const services = [
   {
@@ -50,7 +51,7 @@ const services = [
     description: "Professional backflow prevention and testing services to protect your water supply.",
   },
   {
-    icon: TrashIcon,
+    icon: Broom,
     title: "Drain Cleaning",
     description: "Advanced drain cleaning solutions to clear blockages and maintain smooth water flow.",
   }
@@ -89,8 +90,8 @@ export const Services = () => {
                   <CardDescription>{service.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button variant="outline" className="w-full">
-                    Learn More
+                  <Button variant="outline" className="w-full" asChild>
+                    <Link to="/services">Learn More</Link>
                   </Button>
                 </CardContent>
               </Card>
