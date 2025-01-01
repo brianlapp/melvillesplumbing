@@ -8,7 +8,7 @@ import { useToast } from "@/components/ui/use-toast";
 
 // Add this hidden form for Netlify form detection
 const NetlifyFormDetectionHTML = () => (
-  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+  <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
     <input type="text" name="name" />
     <input type="email" name="email" />
     <input type="tel" name="phone" />
