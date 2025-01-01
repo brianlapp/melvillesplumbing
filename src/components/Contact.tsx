@@ -4,11 +4,16 @@ import { ContactForm } from './contact/ContactForm';
 import { ContactInfo } from './contact/ContactInfo';
 import { useLocation } from 'react-router-dom';
 import { Card } from "@/components/ui/card";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, MapPin, PhoneCall } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const Contact = () => {
   const location = useLocation();
   const isContactPage = location.pathname === '/contact';
+
+  const handleEmergencyCall = () => {
+    window.location.href = 'tel:+15555555555'; // Replace with actual emergency number
+  };
 
   return (
     <section className="bg-blue-50">
@@ -40,6 +45,37 @@ export const Contact = () => {
                 <p className="text-gray-600">
                   We pride ourselves on delivering exceptional service and craftsmanship on every project we undertake.
                 </p>
+              </Card>
+              <Card className="p-6 text-center hover:shadow-lg transition-shadow bg-white">
+                <MapPin className="w-10 h-10 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-semibold mb-2">Location & Service Area</h3>
+                <p className="text-gray-600 mb-2">
+                  Windsor, Ontario
+                </p>
+                <p className="text-gray-600">
+                  We proudly serve Windsor and surrounding communities, including:
+                </p>
+                <ul className="text-gray-600 mt-2">
+                  <li>Tecumseh</li>
+                  <li>LaSalle</li>
+                  <li>Amherstburg</li>
+                  <li>And more!</li>
+                </ul>
+              </Card>
+              <Card className="p-6 text-center hover:shadow-lg transition-shadow bg-white">
+                <PhoneCall className="w-10 h-10 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-semibold mb-2">Emergency Services</h3>
+                <p className="text-gray-600 mb-4">
+                  For emergency plumbing services, we're available 24/7. Don't hesitate to call us anytime you need urgent assistance.
+                </p>
+                <Button 
+                  onClick={handleEmergencyCall}
+                  size="lg"
+                  className="w-full"
+                >
+                  <PhoneCall className="mr-2" />
+                  Call Now for Emergency Service
+                </Button>
               </Card>
             </div>
             <ContactInfo />
