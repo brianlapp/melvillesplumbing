@@ -8,30 +8,36 @@ import { Label } from "@/components/ui/label";
 export const Contact = () => {
   return (
     <section className="py-20">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="bg-primary rounded-lg p-4 mb-6">
-            <img 
-              src="/lovable-uploads/6b4d1817-8c91-4db5-9784-737b0347e368.png" 
-              alt="Company Logo" 
-              className="mx-auto h-44 w-auto md:h-44 sm:h-32" 
-            />
+      {/* Hero Section */}
+      <div 
+        className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-cover bg-center mb-16"
+        style={{
+          backgroundImage: 'url("/lovable-uploads/hero-2.jpg")',
+        }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0" style={{ backgroundColor: '#030636b0' }} />
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="inline-block px-4 py-1 mb-4 text-white bg-green-600/80 rounded-full text-sm font-medium">
+              Contact Us
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Get in Touch
+            </h2>
+            <p className="text-gray-200 max-w-2xl mx-auto mb-6">
+              At Melville's Plumbing, we're here to help with all your plumbing needs. Whether you're dealing with an emergency, 
+              planning a renovation, or just have questions about our services, our friendly and knowledgeable team is ready to assist you.
+            </p>
+            <p className="text-gray-200">
+              We're just a call or click away! Reach out to us via phone, email, or by using our convenient contact form.
+            </p>
           </div>
-          <span className="inline-block px-4 py-1 mb-4 text-primary bg-blue-50 rounded-full text-sm font-medium">
-            Contact Us
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Get in Touch
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-6">
-            At Melville's Plumbing, we're here to help with all your plumbing needs. Whether you're dealing with an emergency, 
-            planning a renovation, or just have questions about our services, our friendly and knowledgeable team is ready to assist you.
-          </p>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            We're just a call or click away! Reach out to us via phone, email, or by using our convenient contact form.
-          </p>
         </div>
+      </div>
 
+      <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto mb-16">
           <Card className="p-6">
             <form name="contact" method="POST" data-netlify="true" className="space-y-6">
@@ -73,6 +79,16 @@ export const Contact = () => {
               </Button>
             </form>
           </Card>
+        </div>
+
+        <div className="text-center mb-12">
+          <div className="bg-primary rounded-lg p-4 mb-6">
+            <img 
+              src="/lovable-uploads/6b4d1817-8c91-4db5-9784-737b0347e368.png" 
+              alt="Company Logo" 
+              className="mx-auto h-44 w-auto md:h-44 sm:h-32" 
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
