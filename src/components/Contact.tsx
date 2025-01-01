@@ -10,15 +10,15 @@ export const Contact = () => {
     <section className="py-20">
       {/* Hero Section */}
       <div 
-        className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-cover bg-center mb-16"
+        className="relative min-h-[30vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
         style={{
           backgroundImage: 'url("/lovable-uploads/hero-2.jpg")',
         }}
       >
         {/* Dark overlay */}
-        <div className="absolute inset-0" style={{ backgroundColor: '#030636b0' }} />
+        <div className="absolute inset-0" style={{ backgroundColor: '#030636D9' }} />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 py-12 md:py-24 relative z-10">
           <div className="text-center max-w-2xl mx-auto">
             <span className="inline-block px-4 py-1 mb-4 text-white bg-green-600/80 rounded-full text-sm font-medium">
               Contact Us
