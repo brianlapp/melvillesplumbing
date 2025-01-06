@@ -91,7 +91,7 @@ export const Services = () => {
                 </CardHeader>
                 <CardContent>
                   <Button variant="outline" className="w-full" asChild>
-                    <Link to="/services">Learn More</Link>
+                    <Link to="/contact">Contact Us</Link>
                   </Button>
                 </CardContent>
               </Card>
