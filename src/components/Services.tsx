@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, Shield, Trash2, Construction, Phone, Mail } from "lucide-react";
+import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, Shield, Trash2, Construction, Phone, Mail, Check } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -156,26 +156,38 @@ export const Services = () => {
         >
           <Card className="bg-white shadow-lg">
             <CardContent className="grid md:grid-cols-2 gap-8 p-8">
-              {/* Left Section */}
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-primary mb-4">
-                    Serving Windsor and Beyond
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    Melville's Plumbing proudly serves Windsor and surrounding communities. 
-                    We understand the unique plumbing challenges in our region, and we're here 
-                    to provide personalized solutions that last.
-                  </p>
-                </div>
-                
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h4 className="text-primary font-semibold text-lg mb-3">Local Areas Served:</h4>
-                  <p className="text-gray-600">Windsor, Tecumseh, LaSalle, Amherstburg, and more.</p>
+
+          {/* Left Section */}
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-2xl font-bold text-primary mb-4">
+                Serving Windsor and Beyond
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Melville's Plumbing proudly serves Windsor and surrounding communities. 
+                We understand the unique plumbing challenges in our region, and we're here 
+                to provide personalized solutions that last.
+              </p>
+            </div>
+            
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <h4 className="text-primary font-semibold text-lg mb-4">Local Areas Served:</h4>
+              <div className="space-y-3">
+                {["Windsor", "Tecumseh", "LaSalle", "Amherstburg"].map((area) => (
+                  <div key={area} className="flex items-center space-x-2">
+                    <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-gray-700 font-medium">{area}</span>
+                  </div>
+                ))}
+                <div className="flex items-center space-x-2">
+                  <Check className="w-5 h-5 text-green-500 flex-shrink-0" />
+                  <span className="text-gray-700 font-medium">And more surrounding areas</span>
                 </div>
               </div>
+            </div>
+          </div>
 
-              {/* Right Section */}
+          {/* Right Section */}
               <div className="space-y-6">
                 <div>
                   <h3 className="text-2xl font-bold text-primary mb-4">
@@ -207,6 +219,7 @@ export const Services = () => {
                   </div>
                 </div>
               </div>
+
             </CardContent>
           </Card>
         </motion.div>
