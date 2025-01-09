@@ -87,7 +87,7 @@ const WaterHeaterPage = () => {
               Don't wait until you're left in cold water. Contact us today for expert water heater services.
             </p>
             <Button 
-              size="xxl"  
+              size="lg"  
               variant="secondary" 
               className="group text-2xl px-12 py-8"
               asChild
