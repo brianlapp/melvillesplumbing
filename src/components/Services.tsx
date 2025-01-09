@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ServicesList } from "./services/ServicesList";
 import { ServiceFeatures } from "./services/ServiceFeatures";
-import { LocationsCard } from "./services/LocationsCard";
 import { ContactCard } from "./services/ContactCard";
 
 export const Services = () => {
@@ -40,25 +39,8 @@ export const Services = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mt-16 space-y-8"
+          className="mt-16"
         >
-          {/* Service Area Card */}
-          <Card className="bg-white shadow-lg">
-            <CardContent className="p-8">
-              <div>
-                <h3 className="text-2xl font-bold text-primary mb-4">
-                  Serving Windsor and Beyond
-                </h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  Melville's Plumbing proudly serves Windsor and surrounding communities. 
-                  We understand the unique plumbing challenges in our region, and we're here 
-                  to provide personalized solutions that last.
-                </p>
-                <LocationsCard />
-              </div>
-            </CardContent>
-          </Card>
-
           {/* Get In Touch Card */}
           <Card className="bg-white shadow-lg">
             <CardContent className="p-8">

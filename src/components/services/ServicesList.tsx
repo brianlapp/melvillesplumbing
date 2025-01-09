@@ -1,5 +1,7 @@
 import { ServiceCard } from "./ServiceCard";
 import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, Shield, Trash2, Construction } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Check } from "lucide-react";
 
 const services = [
   {
@@ -63,14 +65,42 @@ const services = [
 
 export const ServicesList = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {services.map((service, index) => (
-        <ServiceCard
-          key={index}
-          index={index}
-          {...service}
-        />
-      ))}
+    <div className="space-y-8">
+      <Card className="bg-white shadow-lg p-8 mb-8">
+        <h3 className="text-2xl font-bold text-primary mb-4">
+          Serving Windsor and Beyond
+        </h3>
+        <p className="text-gray-600 leading-relaxed mb-6">
+          Melville's Plumbing proudly serves Windsor and surrounding communities. 
+          We understand the unique plumbing challenges in our region, and we're here 
+          to provide personalized solutions that last.
+        </p>
+        <div className="bg-blue-50 p-6 rounded-lg">
+          <h4 className="text-primary font-semibold text-lg mb-4">Local Areas Served:</h4>
+          <div className="space-y-3">
+            {["Windsor", "Tecumseh", "LaSalle", "Amherstburg"].map((area) => (
+              <div key={area} className="flex items-center space-x-2">
+                <Check className="w-5 h-5 text-secondary flex-shrink-0" />
+                <span className="text-gray-700 font-medium">{area}</span>
+              </div>
+            ))}
+            <div className="flex items-center space-x-2">
+              <Check className="w-5 h-5 text-secondary flex-shrink-0" />
+              <span className="text-gray-700 font-medium">And more surrounding areas</span>
+            </div>
+          </div>
+        </div>
+      </Card>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service, index) => (
+          <ServiceCard
+            key={index}
+            index={index}
+            {...service}
+          />
+        ))}
+      </div>
     </div>
   );
 };
