@@ -33,7 +33,7 @@ const NewConstructionPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto space-y-6"
           >
-            <span className="inline-block px-6 py-2 mb-6 text-white bg-green-600/80 rounded-full text-sm font-medium animate-fade-up">
+            <span className="inline-block px-6 py-2 mb-6 text-white bg-secondary/80 rounded-full text-sm font-medium animate-fade-up">
               Professional Plumbing Services Since 2012
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8">
