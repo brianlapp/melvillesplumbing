@@ -13,6 +13,8 @@ import NewConstructionPage from "./pages/services/NewConstruction";
 import SumpPumpPage from "./pages/services/SumpPump";
 import BathroomKitchenPage from "./pages/services/BathroomKitchen";
 import WaterHeaterPage from "./pages/services/WaterHeater";
+import LeakDetectionPage from "./pages/services/LeakDetection";
+import FixtureInstallationPage from "./pages/services/FixtureInstallation";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +35,8 @@ const App = () => (
           <Route path="/services/sump-pump" element={<SumpPumpPage />} />
           <Route path="/services/bathroom-kitchen" element={<BathroomKitchenPage />} />
           <Route path="/services/water-heater" element={<WaterHeaterPage />} />
+          <Route path="/services/leak-detection" element={<LeakDetectionPage />} />
+          <Route path="/services/fixture-installation" element={<FixtureInstallationPage />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
