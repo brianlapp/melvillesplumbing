@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, Shield, Trash2, Construction } from "lucide-react";
+import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, Shield, Trash2, Construction, Phone, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -155,46 +155,55 @@ export const Services = () => {
           className="mt-16"
         >
           <Card className="bg-white shadow-lg">
-            <CardHeader className="space-y-1 pb-4">
-              <CardTitle className="text-2xl font-bold text-center text-primary">
-                Serving Windsor and Beyond
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-8">
-              <div className="space-y-4">
-                <p className="text-gray-600 text-center leading-relaxed">
-                  Melville's Plumbing proudly serves Windsor and surrounding communities. 
-                  We understand the unique plumbing challenges in our region, and we're here 
-                  to provide personalized solutions that last.
-                </p>
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <p className="text-primary font-semibold mb-2">Local Areas Served:</p>
+            <CardContent className="grid md:grid-cols-2 gap-8 p-8">
+              {/* Left Section */}
+              <div className="space-y-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-4">
+                    Serving Windsor and Beyond
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Melville's Plumbing proudly serves Windsor and surrounding communities. 
+                    We understand the unique plumbing challenges in our region, and we're here 
+                    to provide personalized solutions that last.
+                  </p>
+                </div>
+                
+                <div className="bg-blue-50 p-6 rounded-lg">
+                  <h4 className="text-primary font-semibold text-lg mb-3">Local Areas Served:</h4>
                   <p className="text-gray-600">Windsor, Tecumseh, LaSalle, Amherstburg, and more.</p>
                 </div>
               </div>
 
-              <div className="space-y-6 text-center">
+              {/* Right Section */}
+              <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-bold text-primary mb-4">
-                    Contact Us for Expert Plumbing Services
+                  <h3 className="text-2xl font-bold text-primary mb-4">
+                    Contact Us for Expert Service
                   </h3>
                   <p className="text-gray-600 mb-6">
                     Ready to schedule a service or get a free quote? Contact Melville's Plumbing today!
                   </p>
                 </div>
 
-                <div className="flex flex-col items-center space-y-4">
-                  <Button size="lg" asChild className="w-full max-w-md">
+                <div className="space-y-4">
+                  <Button size="lg" asChild className="w-full">
                     <Link to="/contact">Get In Touch</Link>
                   </Button>
                   
-                  <div className="space-y-2 text-center">
-                    <p className="text-primary font-semibold">
-                      Call/Text: <a href="tel:226-820-4264" className="hover:underline">226-820-4264</a>
-                    </p>
-                    <p className="text-primary font-semibold">
-                      Email: <a href="mailto:melvillesplumbing@gmail.com" className="hover:underline">melvillesplumbing@gmail.com</a>
-                    </p>
+                  <div className="space-y-3 pt-4 border-t border-gray-100">
+                    <div className="flex items-center space-x-2">
+                      <Phone className="w-5 h-5 text-primary" />
+                      <p className="text-primary font-semibold">
+                        Call/Text: <a href="tel:226-820-4264" className="hover:underline">226-820-4264</a>
+                      </p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <Mail className="w-5 h-5 text-primary" />
+                      <p className="text-primary font-semibold">
+                        Email: <a href="mailto:melvillesplumbing@gmail.com" className="hover:underline">melvillesplumbing@gmail.com</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
