@@ -7,27 +7,27 @@ export const ContactFormFields = () => {
   return (
     <>
       <div className="space-y-2">
-        <Label htmlFor="name">Your Name</Label>
+        <Label htmlFor="name">Your Name *</Label>
         <Input type="text" id="name" name="name" required placeholder="John Doe" className="w-full" />
       </div>
       
       <div className="space-y-2">
-        <Label htmlFor="email">Your Email</Label>
+        <Label htmlFor="email">Your Email *</Label>
         <Input type="email" id="email" name="email" required placeholder="john@example.com" className="w-full" />
       </div>
       
       <div className="space-y-2">
-        <Label htmlFor="phone">Your Phone Number</Label>
+        <Label htmlFor="phone">Your Phone Number *</Label>
         <Input type="tel" id="phone" name="phone" required placeholder="(226) 123-4567" className="w-full" />
       </div>
       
       <div className="space-y-2">
-        <Label htmlFor="address">Your Address</Label>
+        <Label htmlFor="address">Your Address (Optional)</Label>
         <Input type="text" id="address" name="address" placeholder="123 Main St, Windsor, ON" className="w-full" />
       </div>
       
       <div className="space-y-2">
-        <Label htmlFor="message">Message</Label>
+        <Label htmlFor="message">Message *</Label>
         <Textarea 
           id="message" 
           name="message" 
