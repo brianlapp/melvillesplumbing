@@ -10,6 +10,7 @@ const SumpPumpPage = () => {
       title="Sump Pump Installation & Maintenance Services in Windsor"
       description="At Melville's Plumbing, we understand the importance of protecting your property from water damage. Our expert team provides comprehensive sump pump installation and maintenance services, ensuring your home remains dry and safe year-round."
     >
+      <div className="container mx-auto px-4 pt-16">
         {/* What is a Sump Pump Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -94,28 +95,29 @@ const SumpPumpPage = () => {
           </div>
         </section>
 
-      {/* Contact CTA */}
-      <section className="text-center py-16 bg-primary text-white rounded-lg">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">
-            Contact Us for Sump Pump Services
-          </h2>
-          <p className="text-xl opacity-90 mb-8">
-            Don't wait until it's too late. Protect your home from water damage with professional sump pump installation and maintenance.
-          </p>
-          <Button 
-            size="xxl"  
-            variant="secondary" 
-            className="group text-2xl px-12 py-8"
-            asChild
-          >
-            <Link to="/contact">
-              Get In Touch
-              <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
-        </div>
-      </section>
+        {/* Contact CTA */}
+        <section className="text-center py-16 bg-primary text-white rounded-lg">
+          <div className="max-w-3xl mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-6">
+              Contact Us for Sump Pump Services
+            </h2>
+            <p className="text-xl opacity-90 mb-8">
+              Don't wait until it's too late. Protect your home from water damage with professional sump pump installation and maintenance.
+            </p>
+            <Button 
+              size="xxl"  
+              variant="secondary" 
+              className="group text-2xl px-12 py-8"
+              asChild
+            >
+              <Link to="/contact">
+                Get In Touch
+                <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          </div>
+        </section>
+      </div>
     </ServicePageLayout>
   );
 };
