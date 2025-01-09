@@ -33,7 +33,7 @@ const ServicesPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <span className="inline-block px-4 py-1 mb-6 text-white bg-green-600/80 rounded-full text-sm font-medium animate-fade-up">
+            <span className="inline-block px-4 py-1 mb-6 text-white bg-secondary/80 rounded-full text-sm font-medium animate-fade-up">
               Professional Plumbing Services Since 2012
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -65,7 +65,7 @@ const ServicesPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <Card className="p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0" />
                   <div className="text-left">
                     <h3 className="font-semibold text-xl mb-2 text-primary">Experienced Team</h3>
                     <p className="text-gray-600">With over a decade of hands-on experience, we bring expertise to every job.</p>
@@ -74,7 +74,7 @@ const ServicesPage = () => {
               </Card>
               <Card className="p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0" />
                   <div className="text-left">
                     <h3 className="font-semibold text-xl mb-2 text-primary">Honest & Reliable</h3>
                     <p className="text-gray-600">Our reputation is built on trust and transparency.</p>
@@ -83,7 +83,7 @@ const ServicesPage = () => {
               </Card>
               <Card className="p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0" />
                   <div className="text-left">
                     <h3 className="font-semibold text-xl mb-2 text-primary">Locally Owned</h3>
                     <p className="text-gray-600">We understand Windsor's unique plumbing needs and challenges.</p>
@@ -92,7 +92,7 @@ const ServicesPage = () => {
               </Card>
               <Card className="p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start space-x-3">
-                  <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0" />
                   <div className="text-left">
                     <h3 className="font-semibold text-xl mb-2 text-primary">Guaranteed Satisfaction</h3>
                     <p className="text-gray-600">We stand behind our work to ensure your peace of mind.</p>
@@ -120,4 +120,3 @@ const ServicesPage = () => {
 };
 
 export default ServicesPage;
-

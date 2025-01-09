@@ -36,7 +36,7 @@ const EmergencyPlumbingPage = () => {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <span className="inline-block px-4 py-1 mb-6 text-white bg-green-600/80 rounded-full text-sm font-medium">
+            <span className="inline-block px-4 py-1 mb-6 text-white bg-secondary/80 rounded-full text-sm font-medium">
               Professional Plumbing Services Since 2012
             </span>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -45,7 +45,7 @@ const EmergencyPlumbingPage = () => {
             <p className="text-lg text-gray-200 mb-8 leading-relaxed">
               When a plumbing emergency strikes, time is of the essence. At Melville's Plumbing, we specialize in providing prompt, reliable, and expert emergency plumbing services across Windsor and the surrounding areas. With over a decade of experience, we're here to handle your urgent plumbing needs 24/7, ensuring your home or business is protected from costly damages.
             </p>
-            <Button size="lg" onClick={handleEmergencyCall} className="bg-red-600 hover:bg-red-700">
+            <Button size="lg" onClick={handleEmergencyCall} className="bg-secondary hover:bg-secondary/90">
               <Phone className="mr-2 h-5 w-5" />
               Call Now for Emergency Service
             </Button>
@@ -73,7 +73,7 @@ const EmergencyPlumbingPage = () => {
             ].map((item, index) => (
               <Card key={index} className="p-4">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                   <p className="text-gray-600">{item}</p>
                 </div>
               </Card>
@@ -147,7 +147,7 @@ const EmergencyPlumbingPage = () => {
             Don't wait - contact us immediately for fast, reliable emergency plumbing service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={handleEmergencyCall} className="bg-red-600 hover:bg-red-700">
+            <Button size="lg" onClick={handleEmergencyCall} className="bg-secondary hover:bg-secondary/90">
               <Phone className="mr-2 h-5 w-5" />
               Call Now: 226-820-4264
             </Button>
