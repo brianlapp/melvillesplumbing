@@ -2,7 +2,7 @@ import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { CheckCircle2, Phone, Mail } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const SumpPumpPage = () => {
   return (
@@ -104,20 +104,17 @@ const SumpPumpPage = () => {
             <p className="text-xl opacity-90 mb-8">
               Don't wait until it's too late. Protect your home from water damage with professional sump pump installation and maintenance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="xl" variant="secondary" asChild>
-                <Link to="/contact">
-                  <Mail className="mr-2" />
-                  Get In Touch
-                </Link>
-              </Button>
-              <Button size="xl" variant="outline" asChild className="border-white text-white hover:bg-white hover:text-primary">
-                <a href="tel:226-820-4264">
-                  <Phone className="mr-2" />
-                  Call Us: 226-820-4264
-                </a>
-              </Button>
-            </div>
+            <Button 
+              size="lg" 
+              variant="secondary" 
+              className="group"
+              asChild
+            >
+              <Link to="/contact">
+                Get In Touch
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
           </div>
         </section>
       </div>
