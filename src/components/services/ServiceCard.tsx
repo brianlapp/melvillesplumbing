@@ -9,9 +9,10 @@ interface ServiceCardProps {
   title: string;
   description: string;
   index: number;
+  slug?: string;
 }
 
-export const ServiceCard = ({ icon: Icon, title, description, index }: ServiceCardProps) => {
+export const ServiceCard = ({ icon: Icon, title, description, index, slug }: ServiceCardProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -26,7 +27,9 @@ export const ServiceCard = ({ icon: Icon, title, description, index }: ServiceCa
         <CardContent>
           <p className="text-gray-600 mb-4">{description}</p>
           <Button variant="outline" className="w-full" asChild>
-            <Link to="/contact">Contact Us</Link>
+            <Link to={slug ? `/services/${slug}` : "/contact"}>
+              {slug ? "Learn More" : "Contact Us"}
+            </Link>
           </Button>
         </CardContent>
       </Card>

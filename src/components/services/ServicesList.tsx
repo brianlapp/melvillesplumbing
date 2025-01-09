@@ -6,11 +6,13 @@ const services = [
     icon: Clock,
     title: "Emergency Plumbing Services",
     description: "Available 24/7 to tackle burst pipes, major leaks, and sewer backups. No matter the time, we'll be there to protect your property and restore your plumbing.",
+    slug: "emergency-plumbing"
   },
   {
     icon: Construction,
     title: "New Construction Plumbing",
     description: "Building a new home or commercial property? Our team collaborates with builders and contractors to deliver complete plumbing solutions for new construction projects.",
+    slug: "new-construction"
   },
   {
     icon: Wrench,
