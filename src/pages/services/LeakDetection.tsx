@@ -2,7 +2,7 @@ import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, Wrench, Clock, Shield, Tool } from "lucide-react";
+import { ArrowRight, Search, Wrench, Clock, Shield, Wrench2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const LeakDetectionPage = () => {
@@ -40,7 +40,7 @@ const LeakDetectionPage = () => {
                 description: "Identifying potential issues before they become major problems."
               },
               {
-                icon: Tool,
+                icon: Wrench2,
                 title: "Complete Assessment",
                 description: "Thorough inspection of your entire plumbing system."
               }

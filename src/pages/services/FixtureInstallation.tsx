@@ -2,7 +2,7 @@ import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowRight, Wrench, Settings, Tool, CheckCircle, ShowerHead } from "lucide-react";
+import { ArrowRight, Wrench, Settings, Wrench2, CheckCircle, ShowerHead } from "lucide-react";
 import { motion } from "framer-motion";
 
 const FixtureInstallationPage = () => {
@@ -35,7 +35,7 @@ const FixtureInstallationPage = () => {
                 description: "Regular maintenance to keep your fixtures working efficiently."
               },
               {
-                icon: Tool,
+                icon: Wrench2,
                 title: "Repairs",
                 description: "Quick and reliable repairs for all types of fixture issues."
               },
