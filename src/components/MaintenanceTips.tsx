@@ -27,7 +27,7 @@ export const MaintenanceTips = () => {
               <ul className="space-y-4">
                 {tips.map((tip, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+                    <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
                     <span className="text-gray-600">{tip}</span>
                   </li>
                 ))}
@@ -36,7 +36,7 @@ export const MaintenanceTips = () => {
           </Card>
           <div className="text-center mt-8">
             <Link to="/contact">
-              <Button size="lg" className="bg-green-600 hover:bg-green-700">
+              <Button size="lg" variant="secondary">
                 Get In Touch
               </Button>
             </Link>

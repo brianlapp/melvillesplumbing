@@ -56,7 +56,7 @@ export const WhyChooseUs = () => {
         </div>
         <div className="text-center mt-12">
           <Link to="/contact">
-            <Button size="lg" className="bg-green-600 hover:bg-green-700">
+            <Button size="lg" variant="secondary">
               Get In Touch
             </Button>
           </Link>
