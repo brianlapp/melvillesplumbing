@@ -15,7 +15,7 @@ const FixtureInstallationPage = () => {
       <div className="container mx-auto px-4 pt-16">
         {/* Services Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Our Fixture Services
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -64,7 +64,7 @@ const FixtureInstallationPage = () => {
 
         {/* Process Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Our Installation Process
           </h2>
           <div className="grid md:grid-cols-2 gap-6">

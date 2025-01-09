@@ -15,7 +15,7 @@ const BathroomKitchenPage = () => {
       <div className="container mx-auto px-4 pt-16">
         {/* Why Professional Plumbing Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Why is Professional Plumbing Essential for Renovations?
           </h2>
           <Card className="p-8">
@@ -27,7 +27,7 @@ const BathroomKitchenPage = () => {
 
         {/* Services Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Our Bathroom & Kitchen Renovation Plumbing Services
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -76,7 +76,7 @@ const BathroomKitchenPage = () => {
 
         {/* Tips Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Tips for a Successful Bathroom or Kitchen Renovation
           </h2>
           <div className="grid md:grid-cols-2 gap-6">

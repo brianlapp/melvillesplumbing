@@ -15,7 +15,7 @@ const LeakDetectionPage = () => {
       <div className="container mx-auto px-4 pt-16">
         {/* Services Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Our Comprehensive Leak Detection Services
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -59,7 +59,7 @@ const LeakDetectionPage = () => {
 
         {/* Signs of Leaks Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Common Signs of Water Leaks
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
