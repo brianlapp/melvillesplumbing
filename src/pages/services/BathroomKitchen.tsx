@@ -2,7 +2,7 @@ import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowRight, Wrench, Layout, Droplet, Wrench2, CheckCircle } from "lucide-react";
+import { ArrowRight, Wrench, Layout, Droplet, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 const BathroomKitchenPage = () => {
@@ -42,7 +42,7 @@ const BathroomKitchenPage = () => {
                 description: "Professional assessment and modification of existing plumbing to accommodate new layouts."
               },
               {
-                icon: Wrench2,
+                icon: Wrench,
                 title: "Appliance Hookups",
                 description: "Precise installation for all kitchen appliances requiring plumbing connections."
               },
