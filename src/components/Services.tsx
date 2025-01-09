@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, TrashIcon, Shield, Trash2 } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, Shield, Trash2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -8,52 +8,47 @@ const services = [
   {
     icon: Clock,
     title: "Emergency Plumbing Services",
-    description: "24/7 emergency services for burst pipes, major leaks, and sewer backups. We're here when you need us most.",
+    description: "Available 24/7 to tackle burst pipes, major leaks, and other emergencies. When you need us most, we'll be there.",
   },
   {
     icon: Home,
     title: "New Construction Plumbing",
-    description: "Complete plumbing solutions for new construction projects, working closely with builders and contractors.",
+    description: "Comprehensive plumbing solutions for new builds, from initial planning to installation.",
   },
   {
     icon: Wrench,
     title: "Sump Pump Services",
-    description: "Expert installation, maintenance, and repair of sump pumps to protect your property from flooding.",
+    description: "Keep your basement dry and prevent flooding with our reliable sump pump services.",
   },
   {
     icon: Droplets,
     title: "Bathroom & Kitchen Renovations",
-    description: "Professional plumbing services for your renovation projects, from fixture installation to pipe reconfiguration.",
+    description: "Expert plumbing for remodels and new construction projects.",
   },
   {
     icon: Droplet,
     title: "Water Heater Services",
-    description: "Specialized installation and repair services for both tank and tankless water heater systems.",
+    description: "Expert installation, repair, and replacement for tank and tankless water heaters.",
   },
   {
     icon: Search,
     title: "Leak Detection & Repair",
-    description: "State-of-the-art leak detection and efficient repair solutions to prevent water damage.",
-  },
-  {
-    icon: Wrench,
-    title: "Fixture Installation & Repair",
-    description: "Expert installation and repair of all plumbing fixtures to enhance your space's functionality.",
+    description: "Quickly find and fix leaks to prevent costly water damage.",
   },
   {
     icon: PenLine,
-    title: "Pipe Services",
-    description: "Comprehensive pipe repair and replacement services to maintain your plumbing system's efficiency.",
+    title: "Fixture Installation & Repair",
+    description: "Upgrade your kitchen or bathroom with stylish and functional fixtures.",
   },
   {
     icon: Shield,
     title: "Backflow Prevention",
-    description: "Professional backflow prevention and testing services to protect your water supply.",
+    description: "Protect your water supply with professional backflow prevention systems.",
   },
   {
     icon: Trash2,
     title: "Drain Cleaning",
-    description: "Advanced drain cleaning solutions to clear blockages and maintain smooth water flow.",
+    description: "Efficiently restore flow to your plumbing with professional drain cleaning.",
   }
 ];
 
@@ -68,10 +63,12 @@ export const Services = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Services
+            Comprehensive Plumbing Solutions for Windsor Homes and Businesses
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Professional plumbing services for all your residential and commercial needs
+            At Melville's Plumbing, we pride ourselves on offering a full spectrum of plumbing services 
+            designed to meet the unique needs of Windsor residents. Our team of experts is equipped to 
+            handle jobs of all sizes, from routine maintenance to complex installations.
           </p>
         </motion.div>
 
@@ -87,9 +84,9 @@ export const Services = () => {
                 <CardHeader>
                   <service.icon className="w-12 h-12 text-primary mb-4" />
                   <CardTitle>{service.title}</CardTitle>
-                  <CardDescription>{service.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
                   <Button variant="outline" className="w-full" asChild>
                     <Link to="/contact">Contact Us</Link>
                   </Button>
