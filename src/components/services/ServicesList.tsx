@@ -1,5 +1,6 @@
 import { ServiceCard } from "./ServiceCard";
 import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, Shield, Trash2, Construction } from "lucide-react";
+import { LocationsCard } from "./LocationsCard";
 
 const services = [
   {
@@ -71,6 +72,7 @@ export const ServicesList = () => {
           {...service}
         />
       ))}
+      <LocationsCard />
     </div>
   );
 };
