@@ -152,32 +152,54 @@ export const Services = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mt-16"
+          className="mt-16"
         >
-          <h3 className="text-2xl font-bold mb-4">Serving Windsor and Beyond</h3>
-          <p className="text-gray-600 mb-4">
-            Melville's Plumbing proudly serves Windsor and surrounding communities. We understand 
-            the unique plumbing challenges in our region, and we're here to provide personalized 
-            solutions that last.
-          </p>
-          <p className="text-gray-600 mb-8">
-            Local Areas Served: Windsor, Tecumseh, LaSalle, Amherstburg, and more.
-          </p>
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold">Contact Us for Expert Plumbing Services</h3>
-            <p className="text-gray-600">
-              Ready to schedule a service or get a free quote? Contact Melville's Plumbing today!
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <Button size="lg" asChild>
-                <Link to="/contact">Get In Touch</Link>
-              </Button>
-              <div className="text-gray-600">
-                <p>Call/Text: 226-820-4264</p>
-                <p>Email: melvillesplumbing@gmail.com</p>
+          <Card className="bg-white shadow-lg">
+            <CardHeader className="space-y-1 pb-4">
+              <CardTitle className="text-2xl font-bold text-center text-primary">
+                Serving Windsor and Beyond
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-8">
+              <div className="space-y-4">
+                <p className="text-gray-600 text-center leading-relaxed">
+                  Melville's Plumbing proudly serves Windsor and surrounding communities. 
+                  We understand the unique plumbing challenges in our region, and we're here 
+                  to provide personalized solutions that last.
+                </p>
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <p className="text-primary font-semibold mb-2">Local Areas Served:</p>
+                  <p className="text-gray-600">Windsor, Tecumseh, LaSalle, Amherstburg, and more.</p>
+                </div>
               </div>
-            </div>
-          </div>
+
+              <div className="space-y-6 text-center">
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-4">
+                    Contact Us for Expert Plumbing Services
+                  </h3>
+                  <p className="text-gray-600 mb-6">
+                    Ready to schedule a service or get a free quote? Contact Melville's Plumbing today!
+                  </p>
+                </div>
+
+                <div className="flex flex-col items-center space-y-4">
+                  <Button size="lg" asChild className="w-full max-w-md">
+                    <Link to="/contact">Get In Touch</Link>
+                  </Button>
+                  
+                  <div className="space-y-2 text-center">
+                    <p className="text-primary font-semibold">
+                      Call/Text: <a href="tel:226-820-4264" className="hover:underline">226-820-4264</a>
+                    </p>
+                    <p className="text-primary font-semibold">
+                      Email: <a href="mailto:melvillesplumbing@gmail.com" className="hover:underline">melvillesplumbing@gmail.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </motion.div>
       </div>
     </section>
