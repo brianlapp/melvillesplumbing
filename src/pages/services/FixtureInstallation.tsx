@@ -10,6 +10,7 @@ const FixtureInstallationPage = () => {
     <ServicePageLayout
       title="Fixture Installation & Repair Services in Windsor"
       description="From faucets to showerheads and sinks to toilets, we provide expert installation and repair services for all your plumbing fixtures. Our experienced team ensures quality workmanship and lasting results."
+      backgroundImage="/lovable-uploads/IMG_2031.jpeg"
     >
       <div className="container mx-auto px-4 pt-16">
         {/* Services Section */}
