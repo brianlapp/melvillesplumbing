@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, Shield, Trash2 } from "lucide-react";
+import { Clock, Droplet, Wrench, Home, Droplets, Search, PenLine, Shield, Trash2, Pipe, Construction } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -9,46 +9,61 @@ const services = [
     icon: Clock,
     title: "Emergency Plumbing Services",
     description: "Available 24/7 to tackle burst pipes, major leaks, and other emergencies. When you need us most, we'll be there.",
+    link: "/services/emergency-plumbing"
   },
   {
-    icon: Home,
+    icon: Construction,
     title: "New Construction Plumbing",
     description: "Comprehensive plumbing solutions for new builds, from initial planning to installation.",
+    link: "/services/new-construction"
   },
   {
     icon: Wrench,
     title: "Sump Pump Services",
     description: "Keep your basement dry and prevent flooding with our reliable sump pump services.",
+    link: "/services/sump-pump"
   },
   {
     icon: Droplets,
     title: "Bathroom & Kitchen Renovations",
     description: "Expert plumbing for remodels and new construction projects.",
+    link: "/services/renovations"
   },
   {
     icon: Droplet,
     title: "Water Heater Services",
     description: "Expert installation, repair, and replacement for tank and tankless water heaters.",
+    link: "/services/water-heater"
   },
   {
     icon: Search,
     title: "Leak Detection & Repair",
     description: "Quickly find and fix leaks to prevent costly water damage.",
+    link: "/services/leak-detection"
   },
   {
     icon: PenLine,
     title: "Fixture Installation & Repair",
     description: "Upgrade your kitchen or bathroom with stylish and functional fixtures.",
+    link: "/services/fixtures"
+  },
+  {
+    icon: Pipe,
+    title: "Pipe Repair & Replacement",
+    description: "Handle minor repairs or full replacements with precision.",
+    link: "/services/pipe-repair"
   },
   {
     icon: Shield,
     title: "Backflow Prevention",
     description: "Protect your water supply with professional backflow prevention systems.",
+    link: "/services/backflow-prevention"
   },
   {
     icon: Trash2,
     title: "Drain Cleaning",
     description: "Efficiently restore flow to your plumbing with professional drain cleaning.",
+    link: "/services/drain-cleaning"
   }
 ];
 
@@ -85,11 +100,16 @@ export const Services = () => {
                   <service.icon className="w-12 h-12 text-primary mb-4" />
                   <CardTitle>{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <Button variant="outline" className="w-full" asChild>
-                    <Link to="/contact">Contact Us</Link>
-                  </Button>
+                <CardContent className="space-y-4">
+                  <p className="text-gray-600">{service.description}</p>
+                  <div className="flex gap-4">
+                    <Button variant="outline" className="w-full" asChild>
+                      <Link to={service.link}>Learn More</Link>
+                    </Button>
+                    <Button variant="default" className="w-full" asChild>
+                      <Link to="/contact">Contact Us</Link>
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
