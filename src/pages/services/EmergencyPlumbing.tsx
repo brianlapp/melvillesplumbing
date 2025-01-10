@@ -27,7 +27,7 @@ const EmergencyPlumbingPage = () => {
           backgroundImage: 'url("https://plumbers-edmonton.ca/wp-content/uploads/2020/04/emergency-plumber-edmonton.jpg")',
         }}
       >
-        <div className="absolute inset-0 bg-primary/85" />
+        <div className="absolute inset-0 bg-primary/65" />
         
         <div className="container mx-auto px-4 py-12 md:py-24 relative z-10">
           <motion.div
