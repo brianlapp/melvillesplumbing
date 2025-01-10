@@ -24,7 +24,7 @@ const ServicesPage = () => {
           backgroundImage: 'url("/lovable-uploads/hero-2.jpg")',
         }}
       >
-        <div className="absolute inset-0" style={{ backgroundColor: '#030636D9' }} />
+        <div className="absolute inset-0 bg-primary/70" />
         
         <div className="container mx-auto px-4 py-12 md:py-24 relative z-10">
           <motion.div

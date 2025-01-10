@@ -27,7 +27,7 @@ const EmergencyPlumbingPage = () => {
           backgroundImage: 'url("/heros/emergency-plumbing.png")',
         }}
       >
-        <div className="absolute inset-0 bg-primary/75" />
+        <div className="absolute inset-0 bg-primary/70" />
         
         <div className="container mx-auto px-4 py-12 md:py-24 relative z-10">
           <motion.div
