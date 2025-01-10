@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Camera, CheckCircle2, Settings, Wrench } from "lucide-react";
+import { Camera, CheckCircle2, Settings, Wrench, ArrowRight } from "lucide-react";
 
 const DrainCleaningPage = () => {
   return (
@@ -120,24 +120,30 @@ const DrainCleaningPage = () => {
           </div>
         </section>
 
-        {/* Additional Info Section */}
-        <section className="mb-20">
-          <div className="max-w-4xl mx-auto">
-            <Card className="p-8">
-              <h2 className="text-2xl font-bold mb-6 text-center">Schedule Your Drain Cleaning Service Today</h2>
-              <p className="text-gray-600 mb-6 text-center">
-                Don't let clogged drains disrupt your life. Contact Melville's Plumbing today for prompt and professional drain cleaning services in Windsor. Whether it's a minor blockage or a major sewer line issue, we're here to help.
-              </p>
-              <div className="flex flex-col items-center gap-4">
-                <Button asChild size="lg" className="w-full md:w-auto">
-                  <Link to="/contact">Get In Touch</Link>
-                </Button>
-                <div className="text-center">
-                  <p className="font-semibold">Call/Text: 226-820-4264</p>
-                  <p>Email: melvillesplumbing@gmail.com</p>
-                </div>
-              </div>
-            </Card>
+        {/* Contact CTA Section */}
+        <section className="text-center py-16 bg-primary text-white rounded-lg">
+          <div className="max-w-3xl mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-6">
+              Contact Us for Drain Cleaning Services
+            </h2>
+            <p className="text-xl opacity-90 mb-8">
+              Don't let clogged drains disrupt your life. Contact Melville's Plumbing today for prompt and professional drain cleaning services in Windsor.
+            </p>
+            <Button 
+              size="xxl"  
+              variant="secondary" 
+              className="group text-2xl px-12 py-8"
+              asChild
+            >
+              <Link to="/contact">
+                Get In Touch
+                <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+            <div className="mt-8 text-lg">
+              <p className="font-semibold">Call/Text: 226-820-4264</p>
+              <p>Email: melvillesplumbing@gmail.com</p>
+            </div>
           </div>
         </section>
       </div>
