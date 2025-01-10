@@ -1,29 +1,51 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const services = [
-    { name: "Emergency Plumbing", path: "/services/emergency-plumbing" },
-    { name: "New Construction", path: "/services/new-construction" },
-    { name: "Sump Pump Services", path: "/services/sump-pump" },
-    { name: "Bathroom & Kitchen", path: "/services/bathroom-kitchen" },
-    { name: "Water Heater Services", path: "/services/water-heater" },
-    { name: "Leak Detection", path: "/services/leak-detection" },
-    { name: "Fixture Installation", path: "/services/fixture-installation" },
-    { name: "Pipe Repair", path: "/services/pipe-repair" },
-    { name: "Sewer Line Services", path: "/services/sewer-line" },
-    { name: "Backflow Prevention", path: "/services/backflow-prevention" },
-    { name: "Drain Cleaning", path: "/services/drain-cleaning" },
+    {
+      category: "Emergency & Safety",
+      items: [
+        { name: "Emergency Plumbing", path: "/services/emergency-plumbing" },
+        { name: "Leak Detection", path: "/services/leak-detection" },
+        { name: "Backflow Prevention", path: "/services/backflow-prevention" },
+      ]
+    },
+    {
+      category: "Installation & Repair",
+      items: [
+        { name: "Water Heater Services", path: "/services/water-heater" },
+        { name: "Fixture Installation", path: "/services/fixture-installation" },
+        { name: "Pipe Repair", path: "/services/pipe-repair" },
+      ]
+    },
+    {
+      category: "Maintenance & Cleaning",
+      items: [
+        { name: "Drain Cleaning", path: "/services/drain-cleaning" },
+        { name: "Sewer Line Services", path: "/services/sewer-line" },
+        { name: "Sump Pump Services", path: "/services/sump-pump" },
+      ]
+    },
+    {
+      category: "Construction & Renovation",
+      items: [
+        { name: "New Construction", path: "/services/new-construction" },
+        { name: "Bathroom & Kitchen", path: "/services/bathroom-kitchen" },
+      ]
+    },
   ];
 
   return (
@@ -59,17 +81,37 @@ export const Navigation = () => {
             </Link>
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="inline-flex items-center">
-                  Services <ChevronDown className="ml-2 h-4 w-4" />
+                <Button variant="ghost" className="inline-flex items-center group">
+                  Services 
+                  <ChevronDown className="ml-2 h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56 bg-white">
-                {services.map((service) => (
-                  <DropdownMenuItem key={service.path} asChild>
-                    <Link to={service.path} className="w-full">
-                      {service.name}
-                    </Link>
-                  </DropdownMenuItem>
+              <DropdownMenuContent 
+                align="end" 
+                className="w-72 bg-white p-2"
+                sideOffset={8}
+              >
+                {services.map((category, index) => (
+                  <div key={category.category}>
+                    {index > 0 && <DropdownMenuSeparator />}
+                    <div className="px-2 py-1.5 text-sm font-semibold text-gray-500">
+                      {category.category}
+                    </div>
+                    {category.items.map((service) => (
+                      <DropdownMenuItem
+                        key={service.path}
+                        className="p-0 focus:bg-gray-50"
+                      >
+                        <Link
+                          to={service.path}
+                          className="flex items-center px-2 py-1.5 w-full hover:text-primary transition-colors"
+                        >
+                          <span>{service.name}</span>
+                          <ChevronRight className="ml-auto h-4 w-4 opacity-50" />
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </div>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
@@ -96,37 +138,54 @@ export const Navigation = () => {
         </div>
 
         {/* Mobile navigation */}
-        {isOpen && (
-          <div className="md:hidden py-4 space-y-2">
-            <Link to="/" className="block">
-              <Button variant="ghost" className="w-full text-left justify-start">
-                Home
-              </Button>
-            </Link>
-            <div className="space-y-2 pl-4">
-              {services.map((service) => (
-                <Link key={service.path} to={service.path} className="block">
-                  <Button
-                    variant="ghost"
-                    className="w-full text-left justify-start text-sm"
-                  >
-                    {service.name}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden overflow-hidden"
+            >
+              <div className="py-4 space-y-2">
+                <Link to="/" className="block">
+                  <Button variant="ghost" className="w-full text-left justify-start">
+                    Home
                   </Button>
                 </Link>
-              ))}
-            </div>
-            <Link to="/about" className="block">
-              <Button variant="ghost" className="w-full text-left justify-start">
-                About
-              </Button>
-            </Link>
-            <Link to="/contact" className="block">
-              <Button variant="ghost" className="w-full text-left justify-start">
-                Contact
-              </Button>
-            </Link>
-          </div>
-        )}
+                
+                {services.map((category) => (
+                  <div key={category.category} className="space-y-1">
+                    <div className="px-4 py-2 text-sm font-semibold text-gray-500">
+                      {category.category}
+                    </div>
+                    {category.items.map((service) => (
+                      <Link key={service.path} to={service.path} className="block">
+                        <Button
+                          variant="ghost"
+                          className="w-full text-left justify-start pl-8 text-sm"
+                        >
+                          {service.name}
+                        </Button>
+                      </Link>
+                    ))}
+                  </div>
+                ))}
+
+                <Link to="/about" className="block">
+                  <Button variant="ghost" className="w-full text-left justify-start">
+                    About
+                  </Button>
+                </Link>
+                <Link to="/contact" className="block">
+                  <Button variant="ghost" className="w-full text-left justify-start">
+                    Contact
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
