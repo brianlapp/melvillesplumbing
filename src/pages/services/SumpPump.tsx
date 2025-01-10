@@ -9,6 +9,7 @@ const SumpPumpPage = () => {
     <ServicePageLayout
       title="Sump Pump Installation & Maintenance Services in Windsor"
       description="At Melville's Plumbing, we understand the importance of protecting your property from water damage. Our expert team provides comprehensive sump pump installation and maintenance services, ensuring your home remains dry and safe year-round."
+      backgroundImage="/heros/sump-pump-service.png"
     >
       <div className="container mx-auto px-4 py-20">
         {/* What is a Sump Pump Section */}
