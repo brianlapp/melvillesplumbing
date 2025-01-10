@@ -294,28 +294,30 @@ const NewConstructionPage = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 md:py-24 bg-primary text-white rounded-lg">
-        <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6">
-            Contact Us for Your New Construction Plumbing Needs
-          </h2>
-          <p className="text-xl opacity-90 mb-8">
-            Ready to bring your construction project to life with a reliable plumbing system? Contact Melville's Plumbing today to schedule a consultation and get started on your new build.
-          </p>
-          <Button 
-            size="xxl"
-            variant="secondary"
-            className="group text-2xl px-12 py-8"
-            asChild
-          >
-            <Link to="/contact">
-              Get In Touch
-              <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
-          <div className="mt-8 text-lg">
-            <p className="font-semibold">Call/Text: 226-820-4264</p>
-            <p>Email: melvillesplumbing@gmail.com</p>
+      <section className="py-16 md:py-24 bg-primary text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Contact Us for Your New Construction Plumbing Needs
+            </h2>
+            <p className="text-xl opacity-90">
+              Ready to bring your construction project to life with a reliable plumbing system? Contact Melville's Plumbing today to schedule a consultation and get started on your new build.
+            </p>
+            <Button 
+              size="xxl"
+              variant="secondary"
+              className="group text-2xl px-12 py-8"
+              asChild
+            >
+              <Link to="/contact">
+                Get In Touch
+                <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+            <div className="space-y-2 text-lg mt-8">
+              <p className="font-semibold">Call/Text: 226-820-4264</p>
+              <p>Email: melvillesplumbing@gmail.com</p>
+            </div>
           </div>
         </div>
       </section>
