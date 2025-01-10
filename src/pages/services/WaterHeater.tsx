@@ -10,6 +10,7 @@ const WaterHeaterPage = () => {
     <ServicePageLayout
       title="Water Heater Installation & Repair Services in Windsor"
       description="When it comes to reliable hot water for your home or business, having a well-maintained and efficient water heater is essential. With over a decade of experience, we ensure that your water heating system operates efficiently and meets your household's needs."
+      backgroundImage="/heros/water-heater-service.png"
     >
       <div className="container mx-auto px-4 py-20">
         {/* Why Choose Us Section */}
