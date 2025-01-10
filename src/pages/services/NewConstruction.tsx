@@ -43,7 +43,7 @@ const NewConstructionPage = () => {
               Building a new home or commercial property is an exciting venture, but ensuring a reliable plumbing system is essential for long-term functionality and convenience. At Melville's Plumbing, we specialize in providing comprehensive plumbing solutions for new construction projects in Windsor and the surrounding areas. From initial design to final installation, our team ensures every pipe, fixture, and system is installed with precision and care.
             </p>
             <div className="mt-8">
-              <Button size="xl" asChild className="animate-fade-up bg-secondary/80">
+              <Button size="xl" asChild className="animate-fade-up bg-secondary/80 hover:bg-orange-800">
                 <Link to="/contact">Get In Touch</Link>
               </Button>
             </div>
