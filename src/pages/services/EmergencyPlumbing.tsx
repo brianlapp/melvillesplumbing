@@ -56,11 +56,11 @@ const EmergencyPlumbingPage = () => {
       {/* Main Content */}
       <div className="container mx-auto px-4 py-16">
         {/* What is Considered Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             What is Considered a Plumbing Emergency?
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-gray-600 mb-8 text-center max-w-3xl mx-auto">
             A plumbing emergency refers to any situation where immediate action is required to prevent property damage, restore essential services, or protect your health and safety. Here are some common examples:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -71,7 +71,7 @@ const EmergencyPlumbingPage = () => {
               "No Hot Water: Especially during colder months, a lack of hot water can disrupt daily life.",
               "Clogged Drains: Severe blockages can render your plumbing unusable."
             ].map((item, index) => (
-              <Card key={index} className="p-4">
+              <Card key={index} className="p-6">
                 <div className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
                   <p className="text-gray-600">{item}</p>
@@ -79,10 +79,10 @@ const EmergencyPlumbingPage = () => {
               </Card>
             ))}
           </div>
-          <p className="text-gray-600 mt-6">
+          <p className="text-gray-600 mt-8 text-center max-w-3xl mx-auto">
             If you're unsure whether your issue qualifies as an emergency, call us, and we'll guide you on the best course of action.
           </p>
-          <div className="mt-8 text-center">
+          <div className="mt-10 text-center">
             <Button size="lg" asChild>
               <Link to="/contact">Get In Touch</Link>
             </Button>
@@ -90,11 +90,11 @@ const EmergencyPlumbingPage = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Frequently Asked Questions About Emergency Plumbing Services
           </h2>
-          <div className="space-y-8">
+          <div className="space-y-8 max-w-4xl mx-auto">
             {[
               {
                 question: "What should I do during a plumbing emergency?",
@@ -130,7 +130,7 @@ const EmergencyPlumbingPage = () => {
                 )
               }
             ].map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
+              <div key={index} className="bg-white rounded-lg p-8 shadow-sm">
                 <h3 className="text-xl font-semibold mb-4">{faq.question}</h3>
                 <div className="text-gray-600">{faq.answer}</div>
               </div>
@@ -139,11 +139,11 @@ const EmergencyPlumbingPage = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="text-center mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">
             Need Emergency Plumbing Service?
           </h2>
-          <p className="text-gray-600 mb-8">
+          <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
             Don't wait - contact us immediately for fast, reliable emergency plumbing service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
