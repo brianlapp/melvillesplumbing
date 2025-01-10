@@ -2,7 +2,8 @@ import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Wrench, LayoutGrid, Droplet, CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
 const BathroomKitchenPage = () => {
   return (
@@ -37,7 +38,7 @@ const BathroomKitchenPage = () => {
                 description: "Expert installation of sinks, tubs, faucets, and more with proper connections and leak-free operation."
               },
               {
-                icon: Layout,
+                icon: LayoutGrid,
                 title: "Pipe Reconfiguration",
                 description: "Professional assessment and modification of existing plumbing to accommodate new layouts."
               },
