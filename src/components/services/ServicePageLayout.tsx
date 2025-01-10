@@ -125,6 +125,9 @@ export const ServicePageLayout = ({
         
         <div className="container mx-auto px-4 py-12 md:py-24 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
+            <span className="inline-block px-4 py-1 mb-6 text-white bg-secondary/80 rounded-full text-sm font-medium">
+              Professional Plumbing Services Since 2012
+            </span>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               {title}
             </h1>
