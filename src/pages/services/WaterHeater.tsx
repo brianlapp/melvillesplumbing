@@ -11,13 +11,13 @@ const WaterHeaterPage = () => {
       title="Water Heater Installation & Repair Services in Windsor"
       description="When it comes to reliable hot water for your home or business, having a well-maintained and efficient water heater is essential. With over a decade of experience, we ensure that your water heating system operates efficiently and meets your household's needs."
     >
-      <div className="container mx-auto px-4 pt-16">
+      <div className="container mx-auto px-4 py-20">
         {/* Why Choose Us Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
             Why Choose Melville's Plumbing for Water Heater Services?
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 title: "Expertise You Can Trust",
@@ -36,7 +36,7 @@ const WaterHeaterPage = () => {
                 description: "Your comfort and convenience are our top priorities."
               }
             ].map((feature, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+              <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
               </Card>
@@ -45,11 +45,11 @@ const WaterHeaterPage = () => {
         </section>
 
         {/* Services Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
             Our Water Heater Services
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
               {
                 icon: Settings,
@@ -73,7 +73,7 @@ const WaterHeaterPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="p-6 h-full hover:shadow-lg transition-shadow">
+                <Card className="p-8 h-full hover:shadow-lg transition-shadow">
                   <service.icon className="w-12 h-12 text-primary mb-4" />
                   <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
@@ -84,11 +84,11 @@ const WaterHeaterPage = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
             Common Questions About Water Heater Installation & Repair
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
               {
                 question: "How do I know if I need to replace my water heater?",
@@ -107,7 +107,7 @@ const WaterHeaterPage = () => {
                 answer: "Regular maintenance includes annual tank flushing, anode rod inspection, leak checks, and professional inspections to ensure optimal performance."
               }
             ].map((faq, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+              <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold mb-4">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
               </Card>
