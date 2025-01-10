@@ -17,6 +17,7 @@ import LeakDetectionPage from "./pages/services/LeakDetection";
 import FixtureInstallationPage from "./pages/services/FixtureInstallation";
 import PipeRepairPage from "./pages/services/PipeRepair";
 import SewerLinePage from "./pages/services/SewerLine";
+import BackflowPreventionPage from "./pages/services/BackflowPrevention";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/services/fixture-installation" element={<FixtureInstallationPage />} />
           <Route path="/services/pipe-repair" element={<PipeRepairPage />} />
           <Route path="/services/sewer-line" element={<SewerLinePage />} />
+          <Route path="/services/backflow-prevention" element={<BackflowPreventionPage />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
