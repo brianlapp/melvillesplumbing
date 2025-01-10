@@ -2,7 +2,7 @@ import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowRight, Wrench, Pipeline, Shield, Timer } from "lucide-react";
+import { ArrowRight, Wrench, Droplet, Shield, Timer } from "lucide-react";
 import { motion } from "framer-motion";
 
 const PipeRepairPage = () => {
