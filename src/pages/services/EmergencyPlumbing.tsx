@@ -24,7 +24,7 @@ const EmergencyPlumbingPage = () => {
       <section 
         className="relative min-h-[30vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
         style={{
-          backgroundImage: 'url("https://plumbers-edmonton.ca/wp-content/uploads/2020/04/emergency-plumber-edmonton.jpg")',
+          backgroundImage: 'url("/heros/emergency-plumbing.png")',
         }}
       >
         <div className="absolute inset-0 bg-primary/65" />
