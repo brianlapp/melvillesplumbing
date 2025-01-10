@@ -10,23 +10,23 @@ const SumpPumpPage = () => {
       title="Sump Pump Installation & Maintenance Services in Windsor"
       description="At Melville's Plumbing, we understand the importance of protecting your property from water damage. Our expert team provides comprehensive sump pump installation and maintenance services, ensuring your home remains dry and safe year-round."
     >
-      <div className="container mx-auto px-4 pt-16">
+      <div className="container mx-auto px-4 py-20">
         {/* What is a Sump Pump Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             What is a Sump Pump and Why Do You Need One?
           </h2>
-          <p className="text-gray-600 mb-8 text-lg">
+          <p className="text-gray-600 mb-8 text-lg max-w-4xl mx-auto">
             A sump pump is a device installed in the lowest part of a home, typically the basement, to remove water that collects in a sump basin. This water may come from rain, melting snow, or groundwater. Sump pumps protect your property by preventing water from flooding your basement, which can lead to costly repairs and health hazards like mold growth.
           </p>
         </section>
 
         {/* FAQ Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
             Frequently Asked Questions
           </h2>
-          <div className="grid gap-6">
+          <div className="grid gap-8 max-w-5xl mx-auto">
             {[
               {
                 question: "How do I know if I need a sump pump?",
@@ -55,7 +55,7 @@ const SumpPumpPage = () => {
                 )
               }
             ].map((faq, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+              <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold mb-4">{faq.question}</h3>
                 <div className="text-gray-600">{faq.answer}</div>
               </Card>
@@ -64,11 +64,11 @@ const SumpPumpPage = () => {
         </section>
 
         {/* Services Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
             Our Sump Pump Services
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {[
               {
                 title: "Sump Pump Installation",
@@ -87,7 +87,7 @@ const SumpPumpPage = () => {
                 description: "We install battery backup systems to ensure your pump continues to protect your home even during power outages."
               }
             ].map((service, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+              <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                 <p className="text-gray-600">{service.description}</p>
               </Card>
