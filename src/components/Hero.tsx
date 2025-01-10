@@ -7,11 +7,11 @@ export const Hero = () => {
     <section 
       className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
       style={{
-        backgroundImage: 'url("/lovable-uploads/hero-2.jpg")',
+        backgroundImage: 'url("/lovable-uploads/hero-3.jpg")',
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-primary/75" />
+      <div className="absolute inset-0 bg-primary/70" />
       
       <div className="container mx-auto px-4 py-12 md:py-32 relative z-10">
         <motion.div
