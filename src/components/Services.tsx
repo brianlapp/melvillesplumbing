@@ -40,7 +40,7 @@ export const Services = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mt-12 md:mt-16"
+          className="mt-12 md:mt-16 mx-auto max-w-7xl"
         >
           <Card className="bg-white shadow-lg">
             <CardContent className="grid md:grid-cols-2 gap-6 md:gap-8 p-6 md:p-8">

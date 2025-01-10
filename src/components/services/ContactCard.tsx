@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 export const ContactCard = () => {
   return (
-    <div className="space-y-6 bg-primary rounded-lg p-8 text-white">
+    <div className="space-y-6 bg-primary rounded-lg p-6 md:p-8 text-white">
       <div>
-        <h3 className="text-2xl font-bold text-white mb-4">
+        <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
           Contact Us for Expert Service
         </h3>
         <p className="text-gray-100 mb-6">
