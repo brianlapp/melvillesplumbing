@@ -33,7 +33,7 @@ export const ServicePageLayout = ({
           backgroundImage: `url("${backgroundImage}")`,
         }}
       >
-        <div className="absolute inset-0 bg-primary/85" />
+        <div className="absolute inset-0 bg-primary/75" />
         
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <motion.div

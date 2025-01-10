@@ -11,7 +11,7 @@ export const Hero = () => {
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0" style={{ backgroundColor: '#030636b0' }} />
+      <div className="absolute inset-0 bg-primary/75" />
       
       <div className="container mx-auto px-4 py-12 md:py-32 relative z-10">
         <motion.div

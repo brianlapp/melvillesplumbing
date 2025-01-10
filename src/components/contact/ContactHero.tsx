@@ -8,7 +8,7 @@ export const ContactHero = () => {
         backgroundImage: 'url("/lovable-uploads/hero-2.jpg")',
       }}
     >
-      <div className="absolute inset-0" style={{ backgroundColor: '#030636D9' }} />
+      <div className="absolute inset-0 bg-primary/75" />
       
       <div className="container mx-auto px-4 py-12 md:py-24 relative z-10">
         <div className="text-center max-w-2xl mx-auto">
