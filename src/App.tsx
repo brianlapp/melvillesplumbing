@@ -15,6 +15,7 @@ import BathroomKitchenPage from "./pages/services/BathroomKitchen";
 import WaterHeaterPage from "./pages/services/WaterHeater";
 import LeakDetectionPage from "./pages/services/LeakDetection";
 import FixtureInstallationPage from "./pages/services/FixtureInstallation";
+import PipeRepairPage from "./pages/services/PipeRepair";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/services/water-heater" element={<WaterHeaterPage />} />
           <Route path="/services/leak-detection" element={<LeakDetectionPage />} />
           <Route path="/services/fixture-installation" element={<FixtureInstallationPage />} />
+          <Route path="/services/pipe-repair" element={<PipeRepairPage />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
