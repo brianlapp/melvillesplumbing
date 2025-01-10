@@ -31,13 +31,15 @@ export const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Mobile menu button */}
-          <Button
-            variant="ghost"
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          <div className="w-10 md:hidden">
+            <Button
+              variant="ghost"
+              className="md:hidden"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
 
           {/* Logo with proper mobile centering */}
           <div className="flex-1 md:flex-none flex justify-center md:justify-start">
@@ -83,12 +85,14 @@ export const Navigation = () => {
           </div>
 
           {/* Mobile phone button */}
-          <a
-            href="tel:226-820-4264"
-            className="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-secondary"
-          >
-            <Phone className="h-5 w-5 text-white" />
-          </a>
+          <div className="w-10 md:hidden">
+            <a
+              href="tel:226-820-4264"
+              className="flex items-center justify-center w-10 h-10 rounded-full bg-secondary"
+            >
+              <Phone className="h-5 w-5 text-white" />
+            </a>
+          </div>
         </div>
 
         {/* Mobile navigation */}
