@@ -31,7 +31,7 @@ export const Hero = () => {
           <Link to="/contact">
             <Button 
               size="xxl" 
-              className="bg-secondary hover:bg-green-700 text-white transition-transform hover:scale-105"
+              className="bg-secondary hover:bg-orange-700 text-white transition-transform hover:scale-105"
             >
               Get In Touch
             </Button>
