@@ -10,6 +10,7 @@ const DrainCleaningPage = () => {
     <ServicePageLayout
       title="Professional Drain Cleaning & Unclogging Services in Windsor"
       description="Clogged drains are a common and frustrating issue for many homeowners and businesses in Windsor. Whether it's a slow-draining sink or a completely blocked sewer line, these problems can disrupt your daily routine and lead to more severe plumbing issues if left untreated. At Melville's Plumbing, we specialize in professional drain cleaning and unclogging services to ensure your plumbing system functions smoothly."
+      backgroundImage="/heros/drain-cleaning.png"
     >
       <div className="container mx-auto px-4 py-20">
         {/* Why Choose Us Section */}
