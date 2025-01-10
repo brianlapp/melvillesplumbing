@@ -12,7 +12,7 @@ export const ContactHero = () => {
       
       <div className="container mx-auto px-4 py-12 md:py-24 relative z-10">
         <div className="text-center max-w-2xl mx-auto">
-          <span className="inline-block px-4 py-1 mb-4 text-white bg-green-600/80 rounded-full text-sm font-medium">
+          <span className="inline-block px-4 py-1 mb-4 text-white bg-secondary/80 rounded-full text-sm font-medium">
             Contact Us
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

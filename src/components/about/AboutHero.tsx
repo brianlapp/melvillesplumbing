@@ -17,7 +17,7 @@ export const AboutHero = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <span className="inline-block px-4 py-1 mb-6 text-white bg-green-600/80 rounded-full text-sm font-medium">
+          <span className="inline-block px-4 py-1 mb-6 text-white bg-secondary/80 rounded-full text-sm font-medium">
             Trusted Plumbing Experts in Windsor Since 2012
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
