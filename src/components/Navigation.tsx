@@ -1,10 +1,30 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const services = [
+    { name: "Emergency Plumbing", path: "/services/emergency-plumbing" },
+    { name: "New Construction", path: "/services/new-construction" },
+    { name: "Sump Pump Services", path: "/services/sump-pump" },
+    { name: "Bathroom & Kitchen", path: "/services/bathroom-kitchen" },
+    { name: "Water Heater Services", path: "/services/water-heater" },
+    { name: "Leak Detection", path: "/services/leak-detection" },
+    { name: "Fixture Installation", path: "/services/fixture-installation" },
+    { name: "Pipe Repair", path: "/services/pipe-repair" },
+    { name: "Sewer Line Services", path: "/services/sewer-line" },
+    { name: "Backflow Prevention", path: "/services/backflow-prevention" },
+    { name: "Drain Cleaning", path: "/services/drain-cleaning" },
+  ];
 
   return (
     <nav className="bg-white shadow-sm">
@@ -26,9 +46,22 @@ export const Navigation = () => {
             <Link to="/">
               <Button variant="ghost">Home</Button>
             </Link>
-            <Link to="/services">
-              <Button variant="ghost">Services</Button>
-            </Link>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="inline-flex items-center">
+                  Services <ChevronDown className="ml-2 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56 bg-white">
+                {services.map((service) => (
+                  <DropdownMenuItem key={service.path} asChild>
+                    <Link to={service.path} className="w-full">
+                      {service.name}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Link to="/about">
               <Button variant="ghost">About</Button>
             </Link>
@@ -55,11 +88,18 @@ export const Navigation = () => {
                 Home
               </Button>
             </Link>
-            <Link to="/services" className="block">
-              <Button variant="ghost" className="w-full text-left justify-start">
-                Services
-              </Button>
-            </Link>
+            <div className="space-y-2 pl-4">
+              {services.map((service) => (
+                <Link key={service.path} to={service.path} className="block">
+                  <Button
+                    variant="ghost"
+                    className="w-full text-left justify-start text-sm"
+                  >
+                    {service.name}
+                  </Button>
+                </Link>
+              ))}
+            </div>
             <Link to="/about" className="block">
               <Button variant="ghost" className="w-full text-left justify-start">
                 About
