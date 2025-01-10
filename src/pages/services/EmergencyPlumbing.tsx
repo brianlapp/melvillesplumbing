@@ -4,7 +4,7 @@ import { Contact } from "@/components/Contact";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle2, Phone, Mail } from "lucide-react";
+import { CheckCircle2, Phone, Mail, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const EmergencyPlumbingPage = () => {
@@ -139,7 +139,7 @@ const EmergencyPlumbingPage = () => {
         </section>
 
         {/* Contact CTA Section */}
-        <section className="text-center py-16 bg-primary text-white rounded-lg mb-20">
+        <section className="py-16 md:py-24 bg-primary text-white rounded-lg">
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl font-bold mb-6">
               Need Emergency Plumbing Service?

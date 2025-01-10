@@ -118,6 +118,9 @@ const BackflowPreventionPage = () => {
           </div>
         </section>
       </div>
+
+      <Contact />
+      <Footer />
     </ServicePageLayout>
   );
 };

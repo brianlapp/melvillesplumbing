@@ -4,7 +4,7 @@ import { Contact } from "@/components/Contact";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Building2, CheckCircle2, Phone, Mail, Wrench, Clock, Shield, MessageSquare } from "lucide-react";
+import { Building2, CheckCircle2, Phone, Mail, Wrench, Clock, Shield, MessageSquare, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const NewConstructionPage = () => {
