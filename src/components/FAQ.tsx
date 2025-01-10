@@ -54,7 +54,7 @@ export const FAQ = () => {
           </Accordion>
           <div className="text-center">
             <Link to="/contact">
-              <Button size="lg" className="bg-secondary hover:bg-green-600">Get In Touch</Button>
+              <Button size="lg" className="bg-secondary hover:bg-orange-700">Get In Touch</Button>
             </Link>
           </div>
         </div>

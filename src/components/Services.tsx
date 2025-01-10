@@ -29,7 +29,7 @@ export const Services = () => {
           
           <ServiceFeatures />
           
-          <Button size="lg" asChild className="mb-8 md:mb-12 bg-secondary">
+          <Button size="lg" asChild className="mb-8 md:mb-12 bg-secondary hover:bg-orange-700">
             <Link to="/contact">Get In Touch</Link>
           </Button>
         </motion.div>
