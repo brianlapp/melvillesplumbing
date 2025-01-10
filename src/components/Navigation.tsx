@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -30,6 +30,15 @@ export const Navigation = () => {
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
+          {/* Mobile menu button */}
+          <Button
+            variant="ghost"
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
+
           {/* Logo with proper mobile centering */}
           <div className="flex-1 md:flex-none flex justify-center md:justify-start">
             <Link to="/" className="block">
@@ -42,7 +51,7 @@ export const Navigation = () => {
           </div>
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
             <Link to="/">
               <Button variant="ghost">Home</Button>
             </Link>
@@ -68,16 +77,18 @@ export const Navigation = () => {
             <Link to="/contact">
               <Button variant="ghost">Contact</Button>
             </Link>
+            <a href="tel:226-820-4264" className="text-primary font-semibold hover:text-secondary transition-colors">
+              226-820-4264
+            </a>
           </div>
 
-          {/* Mobile menu button */}
-          <Button
-            variant="ghost"
-            className="md:hidden absolute right-4"
-            onClick={() => setIsOpen(!isOpen)}
+          {/* Mobile phone button */}
+          <a
+            href="tel:226-820-4264"
+            className="md:hidden flex items-center justify-center w-10 h-10 rounded-full bg-secondary"
           >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+            <Phone className="h-5 w-5 text-white" />
+          </a>
         </div>
 
         {/* Mobile navigation */}
