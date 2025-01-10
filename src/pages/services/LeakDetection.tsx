@@ -10,7 +10,7 @@ const LeakDetectionPage = () => {
     <ServicePageLayout
       title="Leak Detection & Repair Services in Windsor"
       description="Using state-of-the-art detection methods, we quickly locate and repair leaks to prevent costly water damage to your home or business. Our expert team ensures your plumbing system operates efficiently and safely."
-      backgroundImage="/heros/leak-detection.png"
+      backgroundImage="/heros/water-leak-detection.png"
     >
       <div className="container mx-auto px-4 pt-8 md:pt-16">
         {/* Services Section */}
