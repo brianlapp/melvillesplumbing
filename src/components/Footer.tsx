@@ -58,7 +58,7 @@ export const Footer = () => {
             <Facebook className="h-5 w-5" />
           </a>
         </div>
-        <p>© 2024 Melville's Plumbing. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Melville's Plumbing. All rights reserved.</p>
       </div>
     </>
   );
