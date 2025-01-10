@@ -110,7 +110,7 @@ const FixtureInstallationPage = () => {
               asChild
             >
               <Link to="/contact">
-                Schedule <span class="hidden md:block">Service</span> Now!
+                Schedule <span className="hidden md:block">Service</span> Now!
                 <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
