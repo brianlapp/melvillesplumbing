@@ -125,7 +125,7 @@ const WaterHeaterPage = () => {
               Don't let water heater issues disrupt your daily life. Contact us today for professional installation, repair, or maintenance services.
             </p>
             <Button 
-              size="lg"
+              size="xxl"
               variant="secondary"
               className="group"
               asChild

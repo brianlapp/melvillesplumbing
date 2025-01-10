@@ -104,7 +104,7 @@ const FixtureInstallationPage = () => {
               Contact Melville's Plumbing today for professional fixture installation and repair services.
             </p>
             <Button 
-              size="lg"
+              size="xxl"
               variant="secondary"
               className="group"
               asChild

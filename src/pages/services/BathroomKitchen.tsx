@@ -116,9 +116,9 @@ const BathroomKitchenPage = () => {
               Contact Melville's Plumbing today to schedule a consultation and learn how we can make your renovation stress-free and successful.
             </p>
             <Button 
-              size="lg"
+              size="xxl"
               variant="secondary"
-              className="group"
+              className="group text-2xl px-12 py-8"
               asChild
             >
               <Link to="/contact">

@@ -99,9 +99,9 @@ const LeakDetectionPage = () => {
               Contact Melville's Plumbing today for fast, reliable leak detection and repair services.
             </p>
             <Button 
-              size="lg"
+              size="xxl"
               variant="secondary"
-              className="group"
+              className="group text-2xl px-12 py-8"
               asChild
             >
               <Link to="/contact">
