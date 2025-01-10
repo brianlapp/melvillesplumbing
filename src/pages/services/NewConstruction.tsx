@@ -21,10 +21,10 @@ const NewConstructionPage = () => {
       <section 
         className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
         style={{
-          backgroundImage: 'url("/lovable-uploads/hero-2.jpg")',
+          backgroundImage: 'url("/heros/new-construction.png")',
         }}
       >
-        <div className="absolute inset-0 bg-primary/85" />
+        <div className="absolute inset-0 bg-primary/75" />
         
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <motion.div

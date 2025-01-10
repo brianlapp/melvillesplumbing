@@ -10,7 +10,7 @@ const SewerLinePage = () => {
     <ServicePageLayout
       title="Sewer Line Services in Windsor"
       description="When it comes to maintaining the health of your property's plumbing system, your sewer line plays a critical role. Our team provides comprehensive sewer line services, ensuring your system functions efficiently and reliably."
-      backgroundImage="/lovable-uploads/IMG_2559.jpeg"
+      backgroundImage="/heros/sewer-lines.png"
     >
       <div className="container mx-auto px-4 pt-16">
         {/* What Are Sewer Line Services Section */}

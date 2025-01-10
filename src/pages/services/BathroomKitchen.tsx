@@ -10,7 +10,7 @@ const BathroomKitchenPage = () => {
     <ServicePageLayout
       title="Bathroom & Kitchen Renovation Plumbing Services in Windsor"
       description="Transforming your home with a bathroom or kitchen renovation is an exciting process, but it also requires expert plumbing to ensure everything functions seamlessly. Our experienced team works closely with you to bring your dream space to life while ensuring the plumbing is reliable, efficient, and up to code."
-      backgroundImage="/lovable-uploads/IMG_2023.jpeg"
+      backgroundImage="/heros/bathroom-kitchen.png"
     >
       <div className="container mx-auto px-4 pt-16">
         {/* Why Professional Plumbing Section */}

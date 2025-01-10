@@ -10,7 +10,7 @@ const PipeRepairPage = () => {
     <ServicePageLayout
       title="Pipe Repair & Replacement Services in Windsor"
       description="When it comes to the health of your plumbing system, the condition of your pipes is crucial. At Melville's Plumbing, we specialize in expert pipe repair and replacement services in Windsor and surrounding areas."
-      backgroundImage="/lovable-uploads/IMG_2558.jpeg"
+      backgroundImage="/heros/pipe-repair.png"
     >
       <div className="container mx-auto px-4 pt-16">
         {/* Why Choose Us Section */}
