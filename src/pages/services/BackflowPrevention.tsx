@@ -88,13 +88,23 @@ const BackflowPreventionPage = () => {
               ))}
             </div>
           </motion.div>
+        </section>
+      </div>
 
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Contact Us for Backflow Prevention Installation</h2>
-            <p className="text-gray-600 mb-8">
+      <div className="max-w-3xl mx-auto text-center">
+        <section className="py-16 md:py-24 bg-[#1EAEDB] text-white rounded-lg mb-16">
+          <div className="max-w-3xl mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-6">
+              Contact Us for Backflow Prevention Installation
+            </h2>
+            <p className="text-xl opacity-90 mb-8">
               Protect your water supply with professional backflow prevention installation services from Melville's Plumbing. Whether you need a new device installed or system upgrades, our team is here to help.
             </p>
-            <Button asChild size="lg">
+            <Button 
+              size="lg"
+              className="bg-[#F97316] hover:bg-[#F97316]/90 text-white"
+              asChild
+            >
               <Link to="/contact">Get In Touch</Link>
             </Button>
           </div>

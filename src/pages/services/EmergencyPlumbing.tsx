@@ -147,7 +147,7 @@ const EmergencyPlumbingPage = () => {
             Don't wait - contact us immediately for fast, reliable emergency plumbing service.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={handleEmergencyCall} className="bg-secondary hover:bg-secondary/90">
+            <Button size="lg" onClick={handleEmergencyCall} className="bg-[#F97316] hover:bg-[#F97316]/90 text-white">
               <Phone className="mr-2 h-5 w-5" />
               Call Now: 226-820-4264
             </Button>
