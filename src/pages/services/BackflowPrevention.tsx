@@ -19,7 +19,7 @@ const BackflowPreventionPage = () => {
             <p className="text-sm md:text-base text-gray-600 mb-6 md:mb-8">
               Backflow occurs when water flows in the opposite direction of its intended path, potentially carrying contaminants into your clean water supply. This can happen due to pressure changes in the plumbing system caused by events like a burst pipe or a sudden drop in water pressure. Backflow poses serious health risks, making prevention essential.
             </p>
-            <Button asChild size="lg" className="w-full md:w-auto mb-8 md:mb-12">
+            <Button asChild size="lg" className="w-full bg-primary md:w-auto mb-8 md:mb-12">
               <Link to="/contact">Get In Touch</Link>
             </Button>
           </div>
