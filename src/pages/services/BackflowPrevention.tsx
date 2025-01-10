@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Shield, CheckCircle2, Droplet, AlertTriangle, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
 
 const BackflowPreventionPage = () => {
   return (
