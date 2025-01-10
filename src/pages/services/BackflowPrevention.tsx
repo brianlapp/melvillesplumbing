@@ -10,7 +10,7 @@ const BackflowPreventionPage = () => {
     <ServicePageLayout
       title="Backflow Prevention Installation Services"
       description="Protect your water supply with professional backflow prevention solutions. Our certified experts ensure safe, compliant installations for homes and businesses in Windsor."
-      backgroundImage="/lovable-uploads/IMG_2558.jpeg"
+      backgroundImage="/heros/backflow-prevention.png"
     >
       <div className="container mx-auto px-4 py-8 md:py-16">
         <section className="mb-8 md:mb-16">
