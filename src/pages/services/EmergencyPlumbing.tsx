@@ -138,25 +138,30 @@ const EmergencyPlumbingPage = () => {
           </div>
         </section>
 
-        {/* Contact Section */}
-        <section className="text-center mb-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Need Emergency Plumbing Service?
-          </h2>
-          <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
-            Don't wait - contact us immediately for fast, reliable emergency plumbing service.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" onClick={handleEmergencyCall} className="bg-[#F97316] hover:bg-[#F97316]/90 text-white">
-              <Phone className="mr-2 h-5 w-5" />
-              Call Now: 226-820-4264
-            </Button>
-            <Button size="lg" variant="outline" asChild>
+        {/* Contact CTA Section */}
+        <section className="text-center py-16 bg-primary text-white rounded-lg mb-20">
+          <div className="max-w-3xl mx-auto px-4">
+            <h2 className="text-3xl font-bold mb-6">
+              Need Emergency Plumbing Service?
+            </h2>
+            <p className="text-xl opacity-90 mb-8">
+              Don't wait - contact us immediately for fast, reliable emergency plumbing service in Windsor.
+            </p>
+            <Button 
+              size="xxl"
+              variant="secondary"
+              className="group text-2xl px-12 py-8"
+              asChild
+            >
               <Link to="/contact">
-                <Mail className="mr-2 h-5 w-5" />
-                Send a Message
+                Get In Touch
+                <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
+            <div className="mt-8 text-lg">
+              <p className="font-semibold">Call/Text: 226-820-4264</p>
+              <p>Email: melvillesplumbing@gmail.com</p>
+            </div>
           </div>
         </section>
       </div>

@@ -1,7 +1,7 @@
 import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Shield, CheckCircle2, Droplet, AlertTriangle } from "lucide-react";
+import { Shield, CheckCircle2, Droplet, AlertTriangle, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -92,7 +92,7 @@ const BackflowPreventionPage = () => {
       </div>
 
       <div className="max-w-3xl mx-auto text-center">
-        <section className="py-16 md:py-24 bg-[#1EAEDB] text-white rounded-lg mb-16">
+        <section className="py-16 md:py-24 bg-primary text-white rounded-lg mb-16">
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl font-bold mb-6">
               Contact Us for Backflow Prevention Installation
@@ -101,12 +101,20 @@ const BackflowPreventionPage = () => {
               Protect your water supply with professional backflow prevention installation services from Melville's Plumbing. Whether you need a new device installed or system upgrades, our team is here to help.
             </p>
             <Button 
-              size="lg"
-              className="bg-[#F97316] hover:bg-[#F97316]/90 text-white"
+              size="xxl"
+              variant="secondary"
+              className="group text-2xl px-12 py-8"
               asChild
             >
-              <Link to="/contact">Get In Touch</Link>
+              <Link to="/contact">
+                Get In Touch
+                <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
+            <div className="mt-8 text-lg">
+              <p className="font-semibold">Call/Text: 226-820-4264</p>
+              <p>Email: melvillesplumbing@gmail.com</p>
+            </div>
           </div>
         </section>
       </div>
