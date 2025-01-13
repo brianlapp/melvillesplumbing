@@ -215,22 +215,6 @@ const DrainCleaningPage = () => {
           </div>
         </section>
 
-        {/* Service Area Section */}
-        <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
-          <div className="container mx-auto px-4">
-            <Card className="p-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-                Serving Windsor and Beyond
-              </h2>
-              <p className="text-gray-600 text-center">
-                Melville's Plumbing proudly serves Windsor and the surrounding communities, including Tecumseh, 
-                LaSalle, Amherstburg, and more. Our local expertise allows us to provide tailored solutions for 
-                the unique plumbing challenges in our region.
-              </p>
-            </Card>
-          </div>
-        </section>
-
         {/* Contact CTA Section */}
         <section className="bg-primary/5 rounded-lg p-8 my-20">
           <div className="max-w-3xl mx-auto">
