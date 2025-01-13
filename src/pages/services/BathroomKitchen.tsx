@@ -14,7 +14,7 @@ const BathroomKitchenPage = () => {
       backgroundImage="/heros/bathroom-kitchen.png"
     >
       {/* Essential Plumbing Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
           <Card className="p-8 bg-blue-50/80 backdrop-blur-sm border border-blue-100">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -79,7 +79,7 @@ const BathroomKitchenPage = () => {
       </section>
 
       {/* Tips Section */}
-      <section className="py-16 bg-blue-50/70">
+      <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Tips for a Successful Bathroom or Kitchen Renovation
@@ -116,23 +116,8 @@ const BathroomKitchenPage = () => {
         </div>
       </section>
 
-      {/* CTA Button */}
-      <div className="text-center py-8 bg-white">
-        <Button 
-          size="xl"
-          variant="secondary"
-          className="group"
-          asChild
-        >
-          <Link to="/contact">
-            Get In Touch
-            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-          </Link>
-        </Button>
-      </div>
-
       {/* FAQ Section */}
-      <section className="py-16 bg-gradient-to-b from-white to-blue-50/50">
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Frequently Asked Questions About Bathroom & Kitchen Renovation Plumbing
@@ -198,7 +183,7 @@ const BathroomKitchenPage = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-blue-50/70">
+      <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Why Choose Melville's Plumbing for Your Renovation?
@@ -232,7 +217,7 @@ const BathroomKitchenPage = () => {
       </section>
 
       {/* Service Area Section */}
-      <section className="py-16 bg-gradient-to-b from-blue-50/50 to-white">
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Serving Windsor and Beyond
@@ -241,26 +226,30 @@ const BathroomKitchenPage = () => {
             <p className="text-gray-600 leading-relaxed mb-8">
               Melville's Plumbing proudly serves homeowners in Windsor, Tecumseh, LaSalle, Lakeshore, and the surrounding areas. Whether you're renovating a single bathroom or undertaking a full-scale kitchen overhaul, we're here to help you create a functional and beautiful space.
             </p>
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mb-6">
-                Contact Us for Expert Plumbing Renovation Services
-              </h3>
-              <p className="text-gray-600 mb-8">
-                Ready to bring your dream bathroom or kitchen to life? Contact Melville's Plumbing today to schedule a consultation and learn how we can make your renovation stress-free and successful.
-              </p>
-              <Button 
-                size="xl"
-                variant="secondary"
-                className="group"
-                asChild
-              >
-                <Link to="/contact">
-                  Get In Touch
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-            </div>
           </Card>
+        </div>
+      </section>
+
+      {/* Standard CTA Section used across all service pages */}
+      <section className="text-center py-16 bg-primary text-white rounded-lg mb-16">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6">
+            Ready to Start Your Renovation Project?
+          </h2>
+          <p className="text-xl opacity-90 mb-8">
+            Contact Melville's Plumbing today for professional plumbing renovation services in Windsor.
+          </p>
+          <Button 
+            size="xxl"
+            variant="secondary"
+            className="group text-2xl px-12 py-8"
+            asChild
+          >
+            <Link to="/contact">
+              Get In Touch
+              <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
         </div>
       </section>
     </ServicePageLayout>
