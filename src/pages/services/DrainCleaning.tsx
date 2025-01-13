@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Wrench, Settings, Camera, CheckCircle2, ArrowRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { ContactCard } from "@/components/services/ContactCard";
 
 const DrainCleaningPage = () => {
   const faqItems = [
@@ -214,16 +215,11 @@ const DrainCleaningPage = () => {
           </div>
         </section>
 
-        {/* Service Area Section */}
-        <section className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Serving Windsor and Beyond
-          </h2>
-          <p className="text-gray-600">
-            Melville's Plumbing proudly serves Windsor and the surrounding communities, including Tecumseh, 
-            LaSalle, Amherstburg, and more. Our local expertise allows us to provide tailored solutions for 
-            the unique plumbing challenges in our region.
-          </p>
+        {/* Contact CTA Section */}
+        <section className="bg-primary/5 rounded-lg p-8 my-20">
+          <div className="max-w-3xl mx-auto">
+            <ContactCard />
+          </div>
         </section>
       </div>
     </ServicePageLayout>
