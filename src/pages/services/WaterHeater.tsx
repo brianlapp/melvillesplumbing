@@ -1,8 +1,8 @@
 import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const WaterHeaterPage = () => {
   return (
@@ -218,21 +218,7 @@ const WaterHeaterPage = () => {
         </div>
       </section>
 
-      {/* Service Area Section */}
-      <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
-        <div className="container mx-auto px-4">
-          <Card className="p-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-              Serving Windsor and Surrounding Areas
-            </h2>
-            <p className="text-gray-600 text-center">
-              At Melville's Plumbing, we proudly serve Windsor, Tecumseh, LaSalle, Amherstburg, and beyond. Our team understands the unique plumbing needs of our community and provides personalized solutions to meet them.
-            </p>
-          </Card>
-        </div>
-      </section>
-
-      {/* Standard CTA Section */}
+      {/* Ready to Service CTA Section */}
       <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -254,6 +240,20 @@ const WaterHeaterPage = () => {
               </Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* Service Area Section */}
+      <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
+        <div className="container mx-auto px-4">
+          <Card className="p-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+              Serving Windsor and Surrounding Areas
+            </h2>
+            <p className="text-gray-600 text-center">
+              At Melville's Plumbing, we proudly serve Windsor, Tecumseh, LaSalle, Amherstburg, and beyond. Our team understands the unique plumbing needs of our community and provides personalized solutions to meet them.
+            </p>
+          </Card>
         </div>
       </section>
     </ServicePageLayout>
