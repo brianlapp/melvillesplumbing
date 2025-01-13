@@ -1,30 +1,25 @@
 import { Link } from "react-router-dom";
-import { DesktopNav } from "./navigation/DesktopNav";
 import { MobileNav } from "./navigation/MobileNav";
+import { DesktopNav } from "./navigation/DesktopNav";
 
 export const Navigation = () => {
   return (
-    <nav className="bg-white shadow-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          {/* Mobile menu button */}
-          <MobileNav />
-
-          {/* Logo with proper mobile centering */}
-          <div className="flex-1 md:flex-none flex justify-center md:justify-start">
-            <Link to="/" className="block">
-              <img
-                src="/lovable-uploads/header-logo.png"
-                alt="Melville's Plumbing"
-                className="h-12 w-auto"
-              />
-            </Link>
-          </div>
-
-          {/* Desktop navigation */}
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center">
+        <div className="mr-4 flex">
+          <Link to="/" className="mr-6 flex items-center space-x-2">
+            <img 
+              src="/lovable-uploads/header-logo.png" 
+              alt="Melville's Plumbing Logo" 
+              className="h-12 w-auto"
+            />
+          </Link>
+        </div>
+        <MobileNav />
+        <div className="flex flex-1 items-center justify-end">
           <DesktopNav />
         </div>
       </div>
-    </nav>
+    </header>
   );
 };

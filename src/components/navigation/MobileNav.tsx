@@ -1,93 +1,59 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X, Phone, LayoutGrid } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { motion, AnimatePresence } from "framer-motion";
-import { services } from "./NavigationLinks";
+import { Menu } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { navigationLinks } from "./NavigationLinks";
+import { useState } from "react";
 
 export const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <>
-      {/* Mobile menu button */}
-      <div className="w-10 md:hidden">
-        <Button
-          variant="ghost"
-          className="md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
+      <SheetTrigger asChild>
+        <Button variant="ghost" size="icon" className="lg:hidden">
+          <Menu className="h-6 w-6" />
+          <span className="sr-only">Toggle menu</span>
         </Button>
-      </div>
-
-      {/* Mobile phone button */}
-      <div className="w-10 md:hidden">
-        <a
-          href="tel:226-820-4264"
-          className="flex items-center justify-center w-10 h-10 rounded-full bg-secondary"
-        >
-          <Phone className="h-5 w-5 text-white" />
-        </a>
-      </div>
-
-      {/* Mobile navigation */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden"
-          >
-            <div className="py-4 space-y-2">
-              <Link to="/" className="block">
-                <Button variant="ghost" className="w-full text-left justify-start">
-                  Home
-                </Button>
-              </Link>
-              
-              {services.map((category) => (
-                <div key={category.category} className="space-y-1">
-                  <div className="px-4 py-2 text-sm font-semibold text-primary">
-                    {category.category}
-                  </div>
-                  {category.items.map((service) => (
-                    <Link key={service.path} to={service.path} className="block">
-                      <Button
-                        variant="ghost"
-                        className="w-full text-left justify-start pl-8"
-                      >
-                        <div>
-                          <div className="flex items-center">
-                            {service.icon === "LayoutGrid" && <LayoutGrid className="h-4 w-4 mr-2" />}
-                            <span>{service.name}</span>
-                          </div>
-                          <p className="text-xs text-gray-500 mt-0.5 pl-6">
-                            {service.description}
-                          </p>
-                        </div>
-                      </Button>
-                    </Link>
-                  ))}
-                </div>
-              ))}
-
-              <Link to="/about" className="block">
-                <Button variant="ghost" className="w-full text-left justify-start">
-                  About
-                </Button>
-              </Link>
-              <Link to="/contact" className="block">
-                <Button variant="ghost" className="w-full text-left justify-start">
-                  Contact
-                </Button>
-              </Link>
+      </SheetTrigger>
+      <SheetContent side="left" className="w-[300px] sm:w-[400px]">
+        <nav className="flex flex-col gap-4">
+          {navigationLinks.map((item) => (
+            <div key={item.href}>
+              {item.children ? (
+                <Accordion type="single" collapsible>
+                  <AccordionItem value="services">
+                    <AccordionTrigger>{item.name}</AccordionTrigger>
+                    <AccordionContent>
+                      <div className="flex flex-col space-y-2">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.href}
+                            to={child.href}
+                            onClick={() => setIsOpen(false)}
+                            className="text-sm text-muted-foreground hover:text-primary transition-colors px-4 py-2"
+                          >
+                            {child.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              ) : (
+                <Link
+                  to={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-foreground hover:text-primary transition-colors px-4 py-2"
+                >
+                  {item.name}
+                </Link>
+              )}
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+          ))}
+        </nav>
+      </SheetContent>
+    </Sheet>
   );
 };
