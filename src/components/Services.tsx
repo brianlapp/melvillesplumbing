@@ -1,9 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { ServicesList } from "./services/ServicesList";
-import { ServiceFeatures } from "./services/ServiceFeatures";
 import { LocationsCard } from "./services/LocationsCard";
 import { ContactCard } from "./services/ContactCard";
 
@@ -26,12 +23,6 @@ export const Services = () => {
             plumbing needs. Whether you're facing an emergency or planning a renovation, our experienced 
             team delivers reliable, high-quality solutions tailored to you.
           </p>
-          
-          <ServiceFeatures />
-          
-          <Button size="lg" asChild className="mb-8 md:mb-12 bg-secondary hover:bg-orange-700">
-            <Link to="/contact">Get In Touch</Link>
-          </Button>
         </motion.div>
 
         <ServicesList />
