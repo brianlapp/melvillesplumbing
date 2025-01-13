@@ -2,8 +2,9 @@ import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowRight, Wrench, LayoutGrid, Droplet, CheckCircle } from "lucide-react";
+import { ArrowRight, Wrench, LayoutGrid, Droplet, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const BathroomKitchenPage = () => {
   return (
@@ -12,7 +13,7 @@ const BathroomKitchenPage = () => {
       description="Transforming your home with a bathroom or kitchen renovation is an exciting process, but it also requires expert plumbing to ensure everything functions seamlessly. Our experienced team works closely with you to bring your dream space to life while ensuring the plumbing is reliable, efficient, and up to code."
       backgroundImage="/heros/bathroom-kitchen.png"
     >
-      <div className="container mx-auto px-4 pt-16">
+      <div className="container mx-auto px-4 py-16">
         {/* Why Professional Plumbing Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -30,32 +31,32 @@ const BathroomKitchenPage = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Our Bathroom & Kitchen Renovation Plumbing Services
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 icon: Wrench,
                 title: "Fixture Installation",
-                description: "Expert installation of sinks, tubs, faucets, and more with proper connections and leak-free operation."
+                description: "Whether it's a sleek new sink, a luxurious soaking tub, or a modern faucet, our team expertly installs all types of fixtures. We ensure proper connections and leak-free operation to keep your renovation running smoothly."
               },
               {
                 icon: LayoutGrid,
-                title: "Pipe Reconfiguration",
-                description: "Professional assessment and modification of existing plumbing to accommodate new layouts."
+                title: "Pipe Reconfiguration and Replacement",
+                description: "Redesigning your space often requires reconfiguring pipes to accommodate new layouts. We assess your existing plumbing system and make the necessary modifications to ensure optimal functionality."
               },
               {
                 icon: Wrench,
                 title: "Appliance Hookups",
-                description: "Precise installation for all kitchen appliances requiring plumbing connections."
+                description: "From dishwashers to garbage disposals, we provide precise installation for all kitchen appliances that require plumbing connections."
               },
               {
                 icon: Droplet,
-                title: "Drain Installation",
-                description: "Reliable drain and vent systems tailored to your renovation needs."
+                title: "Drain and Vent Installation",
+                description: "Proper drainage and ventilation are essential for preventing water buildup and ensuring efficient wastewater removal. Our team installs reliable drain and vent systems tailored to your renovation."
               },
               {
-                icon: CheckCircle,
+                icon: CheckCircle2,
                 title: "Water Line Upgrades",
-                description: "Ensuring your water supply meets the demands of modern fixtures and appliances."
+                description: "Older homes may require water line upgrades to meet the demands of modern fixtures and appliances. We ensure your water supply is consistent and sufficient for your renovated space."
               }
             ].map((service, index) => (
               <motion.div
@@ -67,7 +68,7 @@ const BathroomKitchenPage = () => {
                 <Card className="p-6 h-full hover:shadow-lg transition-shadow">
                   <service.icon className="w-12 h-12 text-primary mb-4" />
                   <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <p className="text-gray-600">{service.description}</p>
                 </Card>
               </motion.div>
             ))}
@@ -96,6 +97,10 @@ const BathroomKitchenPage = () => {
               {
                 title: "Consider Energy Efficiency",
                 description: "Incorporate water-saving fixtures and appliances to reduce utility costs."
+              },
+              {
+                title: "Schedule Inspections",
+                description: "Ensure all plumbing work is inspected and approved to meet local building codes."
               }
             ].map((tip, index) => (
               <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
@@ -106,27 +111,159 @@ const BathroomKitchenPage = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="text-center py-16 bg-primary text-white rounded-lg mb-16">
-          <div className="max-w-3xl mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-6">
-              Ready to Transform Your Space?
-            </h2>
-            <p className="text-xl opacity-90 mb-8">
-              Contact Melville's Plumbing today to schedule a consultation and learn how we can make your renovation stress-free and successful.
-            </p>
-            <Button 
-              size="xxl"
-              variant="secondary"
-              className="group text-2xl px-12 py-8"
-              asChild
-            >
-              <Link to="/contact">
-                Get Started Today
-                <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
+        {/* CTA Button */}
+        <div className="text-center mb-16">
+          <Button 
+            size="xl"
+            variant="secondary"
+            className="group"
+            asChild
+          >
+            <Link to="/contact">
+              Get In Touch
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
+        </div>
+
+        {/* FAQ Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Frequently Asked Questions About Bathroom & Kitchen Renovation Plumbing
+          </h2>
+          <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>How do I plan plumbing for a renovation?</AccordionTrigger>
+              <AccordionContent>
+                Planning plumbing for a renovation involves:
+                <ul className="list-disc pl-6 mt-2 space-y-2">
+                  <li>Identifying the placement of fixtures and appliances.</li>
+                  <li>Assessing the current plumbing system's capacity.</li>
+                  <li>Determining if pipes or drains need to be relocated or upgraded.</li>
+                  <li>Consulting with a professional plumber early in the design process to avoid costly changes later.</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>What plumbing updates are common during renovations?</AccordionTrigger>
+              <AccordionContent>
+                During renovations, common plumbing updates include:
+                <ul className="list-disc pl-6 mt-2 space-y-2">
+                  <li>Upgrading old or corroded pipes to modern materials like PEX or copper.</li>
+                  <li>Installing new sinks, faucets, showers, and bathtubs.</li>
+                  <li>Adding water-efficient fixtures to reduce utility bills.</li>
+                  <li>Reconfiguring plumbing for new layouts or additional fixtures.</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>How long does plumbing work take in a renovation?</AccordionTrigger>
+              <AccordionContent>
+                The duration of plumbing work depends on the project's complexity:
+                <ul className="list-disc pl-6 mt-2 space-y-2">
+                  <li>Minor updates (e.g., replacing a faucet): A few hours.</li>
+                  <li>Moderate changes (e.g., relocating pipes): 1-2 days.</li>
+                  <li>Full-scale renovations with major plumbing modifications: 1-2 weeks or more.</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>What permits are required for plumbing renovations?</AccordionTrigger>
+              <AccordionContent>
+                In Windsor, plumbing work often requires permits to ensure compliance with local building codes. Melville's Plumbing handles the permitting process for you, ensuring all work meets legal requirements and passes inspections.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-5">
+              <AccordionTrigger>How can I ensure my plumbing is energy-efficient?</AccordionTrigger>
+              <AccordionContent>
+                To enhance energy efficiency, we recommend:
+                <ul className="list-disc pl-6 mt-2 space-y-2">
+                  <li>Installing low-flow faucets, showerheads, and toilets.</li>
+                  <li>Choosing energy-efficient water heaters.</li>
+                  <li>Insulating pipes to reduce heat loss.</li>
+                  <li>Ensuring fixtures and appliances are properly sealed and connected.</li>
+                </ul>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </section>
+
+        {/* CTA Button */}
+        <div className="text-center mb-16">
+          <Button 
+            size="xl"
+            variant="secondary"
+            className="group"
+            asChild
+          >
+            <Link to="/contact">
+              Get In Touch
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
+        </div>
+
+        {/* Why Choose Us Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Why Choose Melville's Plumbing for Your Renovation?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Experienced Team",
+                description: "With over a decade of expertise, we bring professionalism and precision to every project."
+              },
+              {
+                title: "Customized Solutions",
+                description: "We tailor our services to your unique renovation needs and goals."
+              },
+              {
+                title: "Transparent Communication",
+                description: "From start to finish, we keep you informed about progress and any potential challenges."
+              },
+              {
+                title: "Guaranteed Quality",
+                description: "Our work is backed by a commitment to excellence and customer satisfaction."
+              }
+            ].map((feature, index) => (
+              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </Card>
+            ))}
           </div>
+        </section>
+
+        {/* Service Area Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Serving Windsor and Beyond
+          </h2>
+          <Card className="p-8">
+            <p className="text-gray-600 leading-relaxed mb-8">
+              Melville's Plumbing proudly serves homeowners in Windsor, Tecumseh, LaSalle, Lakeshore, and the surrounding areas. Whether you're renovating a single bathroom or undertaking a full-scale kitchen overhaul, we're here to help you create a functional and beautiful space.
+            </p>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold mb-6">
+                Contact Us for Expert Plumbing Renovation Services
+              </h3>
+              <p className="text-gray-600 mb-8">
+                Ready to bring your dream bathroom or kitchen to life? Contact Melville's Plumbing today to schedule a consultation and learn how we can make your renovation stress-free and successful.
+              </p>
+              <Button 
+                size="xl"
+                variant="secondary"
+                className="group"
+                asChild
+              >
+                <Link to="/contact">
+                  Get In Touch
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+            </div>
+          </Card>
         </section>
       </div>
     </ServicePageLayout>
