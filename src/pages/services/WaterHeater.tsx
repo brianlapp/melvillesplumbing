@@ -1,8 +1,9 @@
 import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Banknote, Gauge, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const WaterHeaterPage = () => {
   return (
@@ -54,6 +55,78 @@ const WaterHeaterPage = () => {
         </div>
       </section>
 
+      {/* Why Upgrade Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50">
+        <div className="container mx-auto px-4">
+          <Card className="p-8 overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-center mb-8"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Why Upgrade Your Water Heater?
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Upgrading your water heater can improve your home's comfort and efficiency:
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                  <Banknote className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Lower Utility Bills</h3>
+                <p className="text-gray-600 text-center">
+                  Modern units use less energy, saving you money.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                  <Gauge className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Better Performance</h3>
+                <p className="text-gray-600 text-center">
+                  Enjoy consistent water temperature and pressure.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="flex flex-col items-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center mb-4">
+                  <Leaf className="w-6 h-6 text-secondary" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">Eco-Friendly Options</h3>
+                <p className="text-gray-600 text-center">
+                  Choose energy-efficient models to reduce your environmental footprint.
+                </p>
+              </motion.div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
       {/* Types of Water Heaters Section */}
       <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
         <div className="container mx-auto px-4">
@@ -85,32 +158,6 @@ const WaterHeaterPage = () => {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Why Upgrade Section */}
-      <section className="py-16 bg-gradient-to-b from-white to-blue-50">
-        <div className="container mx-auto px-4">
-          <Card className="p-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-              Why Upgrade Your Water Heater?
-            </h2>
-            <p className="text-gray-600 mb-6 text-center">
-              Upgrading your water heater can improve your home's comfort and efficiency:
-            </p>
-            <div className="space-y-4">
-              {[
-                "Lower Utility Bills: Modern units use less energy, saving you money.",
-                "Better Performance: Enjoy consistent water temperature and pressure.",
-                "Eco-Friendly Options: Choose energy-efficient models to reduce your environmental footprint."
-              ].map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
-                  <p className="text-gray-600">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </Card>
         </div>
       </section>
 
