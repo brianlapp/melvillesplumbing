@@ -11,11 +11,13 @@ export const Services = () => {
   return (
     <section className="py-12 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4">
+        <ServicesList />
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mb-8 md:mb-12"
+          className="text-center mt-12 md:mt-16 mb-8 md:mb-12"
         >
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
             Comprehensive Plumbing Services in Windsor
@@ -33,8 +35,6 @@ export const Services = () => {
             <Link to="/contact">Get In Touch</Link>
           </Button>
         </motion.div>
-
-        <ServicesList />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
