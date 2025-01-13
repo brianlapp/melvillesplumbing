@@ -7,6 +7,29 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const FixtureInstallationPage = () => {
+  const faqItems = [
+    {
+      question: "What types of fixtures can you install and repair?",
+      answer: "At Melville's Plumbing, we work with kitchen faucets and sinks, bathroom faucets, sinks, and vanities, showerheads and bathtubs, toilets and bidets, laundry and utility sinks, and outdoor faucets and fixtures."
+    },
+    {
+      question: "How do I know if a fixture needs to be repaired or replaced?",
+      answer: "Common signs include persistent leaks or drips, rust or corrosion, reduced water pressure, outdated or damaged appearance, and frequent clogging or malfunctioning. Our professionals assess the situation and recommend the most cost-effective solution."
+    },
+    {
+      question: "How long does it take to install or repair a fixture?",
+      answer: "The time required depends on the type of fixture and complexity of the job. A basic faucet installation may take an hour or two, repairing a leaky toilet could be completed within an hour, and installing a new bathtub or shower fixture may require several hours or a full day. We'll provide an accurate timeline after evaluating your needs."
+    },
+    {
+      question: "Do you provide fixtures, or should I purchase them myself?",
+      answer: "We offer both options. You can select fixtures through us, and we'll handle procurement and installation, or purchase fixtures yourself, and we'll install them for you. We're happy to recommend high-quality, durable options to suit your style and budget."
+    },
+    {
+      question: "How can I maintain my fixtures to avoid future issues?",
+      answer: "Proper maintenance extends the life of your fixtures. Regularly clean faucets, showerheads, and sinks to prevent buildup, check for leaks or drips and address them promptly, avoid using harsh chemicals that can damage finishes, and inspect connections and seals for wear and tear."
+    }
+  ];
+
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -27,6 +50,7 @@ const FixtureInstallationPage = () => {
       title="Fixture Installation & Repair Services in Windsor"
       description="From faucets to showerheads and sinks to toilets, we provide expert installation and repair services for all your plumbing fixtures. Our experienced team ensures quality workmanship and lasting results."
       backgroundImage="/heros/fixture-installation.png"
+      faqItems={faqItems}
     >
       {/* Process Section */}
       <section className="py-12 bg-white">
@@ -161,73 +185,12 @@ const FixtureInstallationPage = () => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>What types of fixtures can you install and repair?</AccordionTrigger>
-                <AccordionContent>
-                  At Melville's Plumbing, we work with:
-                  <ul className="list-disc pl-6 mt-2 space-y-1">
-                    <li>Kitchen faucets and sinks</li>
-                    <li>Bathroom faucets, sinks, and vanities</li>
-                    <li>Showerheads and bathtubs</li>
-                    <li>Toilets and bidets</li>
-                    <li>Laundry and utility sinks</li>
-                    <li>Outdoor faucets and fixtures</li>
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-2">
-                <AccordionTrigger>How do I know if a fixture needs to be repaired or replaced?</AccordionTrigger>
-                <AccordionContent>
-                  While some issues can be resolved with repairs, others may require replacement. Common signs a fixture needs repair or replacement include:
-                  <ul className="list-disc pl-6 mt-2 space-y-1">
-                    <li>Persistent leaks or drips</li>
-                    <li>Rust or corrosion</li>
-                    <li>Reduced water pressure</li>
-                    <li>Outdated or damaged appearance</li>
-                    <li>Frequent clogging or malfunctioning</li>
-                  </ul>
-                  Our professionals assess the situation and recommend the most cost-effective solution.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-3">
-                <AccordionTrigger>How long does it take to install or repair a fixture?</AccordionTrigger>
-                <AccordionContent>
-                  The time required depends on the type of fixture and the complexity of the job. For example:
-                  <ul className="list-disc pl-6 mt-2 space-y-1">
-                    <li>A basic faucet installation may take an hour or two</li>
-                    <li>Repairing a leaky toilet could be completed within an hour</li>
-                    <li>Installing a new bathtub or shower fixture may require several hours or a full day</li>
-                  </ul>
-                  We'll provide an accurate timeline after evaluating your needs.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-4">
-                <AccordionTrigger>Do you provide fixtures, or should I purchase them myself?</AccordionTrigger>
-                <AccordionContent>
-                  We offer both options. You can:
-                  <ul className="list-disc pl-6 mt-2 space-y-1">
-                    <li>Select fixtures through us, and we'll handle procurement and installation</li>
-                    <li>Purchase fixtures yourself, and we'll install them for you</li>
-                  </ul>
-                  We're happy to recommend high-quality, durable options to suit your style and budget.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-5">
-                <AccordionTrigger>How can I maintain my fixtures to avoid future issues?</AccordionTrigger>
-                <AccordionContent>
-                  Proper maintenance extends the life of your fixtures. Here are some tips:
-                  <ul className="list-disc pl-6 mt-2 space-y-1">
-                    <li>Regularly clean faucets, showerheads, and sinks to prevent buildup</li>
-                    <li>Check for leaks or drips and address them promptly</li>
-                    <li>Avoid using harsh chemicals that can damage finishes</li>
-                    <li>Inspect connections and seals for wear and tear</li>
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
+              {faqItems.map((item, index) => (
+                <AccordionItem key={index} value={`item-${index + 1}`}>
+                  <AccordionTrigger>{item.question}</AccordionTrigger>
+                  <AccordionContent>{item.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
             </Accordion>
           </div>
         </div>

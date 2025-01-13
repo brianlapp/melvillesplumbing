@@ -3,11 +3,17 @@ import { Footer } from "@/components/Footer";
 import { Helmet } from "react-helmet";
 import { useLocation } from "react-router-dom";
 
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 interface ServicePageLayoutProps {
   title: string;
   description: string;
   backgroundImage: string;
   children: React.ReactNode;
+  faqItems?: FAQItem[];
 }
 
 export const ServicePageLayout = ({
@@ -15,6 +21,7 @@ export const ServicePageLayout = ({
   description,
   backgroundImage,
   children,
+  faqItems,
 }: ServicePageLayoutProps) => {
   const location = useLocation();
   const currentUrl = `https://melvillesplumbing.ca${location.pathname}`;
@@ -74,6 +81,20 @@ export const ServicePageLayout = ({
     "url": currentUrl
   };
 
+  // Generate FAQ schema if FAQs are present
+  const faqSchema = faqItems ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  } : null;
+
   return (
     <>
       <Helmet>
@@ -110,6 +131,11 @@ export const ServicePageLayout = ({
         <script type="application/ld+json">
           {JSON.stringify(serviceSchema)}
         </script>
+        {faqSchema && (
+          <script type="application/ld+json">
+            {JSON.stringify(faqSchema)}
+          </script>
+        )}
       </Helmet>
 
       <Navigation />
