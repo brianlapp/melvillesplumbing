@@ -21,21 +21,21 @@ export const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+    <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12">
           <span className="inline-block px-4 py-1 mb-4 text-primary bg-blue-50 rounded-full text-sm font-medium">
             Our Work
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Recent Projects
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
             Browse through our recent plumbing projects and see the quality of our workmanship
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {projectImages.map((image, index) => (
             <motion.div
               key={index}
@@ -49,9 +49,11 @@ export const Gallery = () => {
               >
                 <img
                   src={image}
-                  alt={`Plumbing Project ${index + 1}`}
-                  className="w-full h-64 object-cover"
+                  alt={`Melville's Plumbing Project ${index + 1}`}
+                  className="w-full h-48 sm:h-64 object-cover"
                   loading="lazy"
+                  width="400"
+                  height="300"
                 />
               </Card>
             </motion.div>
@@ -64,10 +66,19 @@ export const Gallery = () => {
           className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedImage(null)}
         >
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 text-white p-2"
+            aria-label="Close image preview"
+          >
+            ✕
+          </button>
           <img
             src={selectedImage}
             alt="Project detail"
             className="max-w-full max-h-[90vh] object-contain"
+            width="800"
+            height="600"
           />
         </div>
       )}
