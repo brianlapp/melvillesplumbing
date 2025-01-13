@@ -2,30 +2,132 @@ import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowRight, Wrench, Settings, Plug } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const WaterHeaterPage = () => {
   return (
     <ServicePageLayout
       title="Water Heater Installation & Repair Services in Windsor"
-      description="When it comes to reliable hot water for your home or business, having a well-maintained and efficient water heater is essential. With over a decade of experience, we ensure that your water heating system operates efficiently and meets your household's needs."
+      description="From installation to repairs and maintenance, our expert team provides comprehensive water heater services to keep your home comfortable and efficient."
       backgroundImage="/heros/water-heater-service.png"
     >
-      <div className="container mx-auto px-4 py-20">
-        {/* Why Choose Us Section */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+      {/* Our Services Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50">
+        <div className="container mx-auto px-4">
+          <Card className="p-8 bg-blue-50/80 backdrop-blur-sm border border-blue-100">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Our Water Heater Services
+            </h2>
+            <div className="space-y-6">
+              {[
+                {
+                  title: "Water Heater Installation",
+                  description: "Whether you're upgrading to a new model or installing a water heater for the first time, we provide seamless installation services. We'll help you select the right unit for your needs and ensure it's installed correctly and safely."
+                },
+                {
+                  title: "Water Heater Repairs",
+                  description: "If your water heater isn't working properly, our skilled technicians can diagnose and fix the issue. From faulty thermostats to leaking tanks, we'll get your system back up and running."
+                },
+                {
+                  title: "Tankless Water Heater Services",
+                  description: "Enjoy energy savings and endless hot water with our tankless water heater installation and maintenance services. We'll guide you through the benefits and ensure your unit performs at its best."
+                },
+                {
+                  title: "Water Heater Maintenance",
+                  description: "Prevent unexpected breakdowns with our routine maintenance services. We'll flush the tank, inspect components, and address potential issues before they become major problems."
+                },
+                {
+                  title: "Emergency Water Heater Services",
+                  description: "When your water heater fails, you don't have to wait. Our team provides prompt emergency services to restore your hot water supply as quickly as possible."
+                }
+              ].map((service, index) => (
+                <div key={index} className="flex gap-4">
+                  <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                    <p className="text-gray-600">{service.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      {/* Types of Water Heaters Section */}
+      <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Types of Water Heaters We Service
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Traditional Tank Water Heaters",
+                description: "Reliable and cost-effective solutions for homes and businesses."
+              },
+              {
+                title: "Tankless Water Heaters",
+                description: "Energy-efficient units that provide hot water on demand."
+              },
+              {
+                title: "Gas Water Heaters",
+                description: "Efficient models powered by natural gas."
+              },
+              {
+                title: "Electric Water Heaters",
+                description: "Easy-to-install units with consistent performance."
+              }
+            ].map((type, index) => (
+              <Card key={index} className="p-6">
+                <h3 className="text-xl font-semibold mb-3">{type.title}</h3>
+                <p className="text-gray-600">{type.description}</p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Upgrade Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50">
+        <div className="container mx-auto px-4">
+          <Card className="p-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+              Why Upgrade Your Water Heater?
+            </h2>
+            <p className="text-gray-600 mb-6 text-center">
+              Upgrading your water heater can improve your home's comfort and efficiency:
+            </p>
+            <div className="space-y-4">
+              {[
+                "Lower Utility Bills: Modern units use less energy, saving you money.",
+                "Better Performance: Enjoy consistent water temperature and pressure.",
+                "Eco-Friendly Options: Choose energy-efficient models to reduce your environmental footprint."
+              ].map((benefit, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-secondary flex-shrink-0 mt-1" />
+                  <p className="text-gray-600">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Why Choose Melville's Plumbing for Water Heater Services?
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
               {
                 title: "Expertise You Can Trust",
                 description: "With over 10 years of plumbing experience, our team delivers top-quality service."
               },
               {
-                title: "Prompt & Reliable",
+                title: "Prompt & Reliable Service",
                 description: "Whether you need a repair or a new installation, we're here to help quickly and efficiently."
               },
               {
@@ -33,112 +135,127 @@ const WaterHeaterPage = () => {
                 description: "We handle all types of water heaters, including tank and tankless models."
               },
               {
-                title: "Satisfaction Guaranteed",
+                title: "Customer Satisfaction Guaranteed",
                 description: "Your comfort and convenience are our top priorities."
               }
-            ].map((feature, index) => (
-              <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+            ].map((reason, index) => (
+              <Card key={index} className="p-6">
+                <h3 className="text-xl font-semibold mb-3">{reason.title}</h3>
+                <p className="text-gray-600">{reason.description}</p>
               </Card>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Services Section */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-            Our Water Heater Services
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                icon: Settings,
-                title: "Installation",
-                description: "Expert installation of new water heaters, including both traditional tank and tankless systems."
-              },
-              {
-                icon: Wrench,
-                title: "Repairs",
-                description: "Professional diagnosis and repair of all water heater issues, from minor fixes to major repairs."
-              },
-              {
-                icon: Plug,
-                title: "Maintenance",
-                description: "Regular maintenance services to extend your water heater's lifespan and prevent unexpected breakdowns."
-              }
-            ].map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Card className="p-8 h-full hover:shadow-lg transition-shadow">
-                  <service.icon className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+      {/* FAQ Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-blue-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Common Questions About Water Heater Installation & Repair
           </h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="space-y-8">
             {[
               {
                 question: "How do I know if I need to replace my water heater?",
-                answer: "Signs include age over 8-12 years, inefficiency, leaks, rusty water, or frequent repairs. If you notice these signs, it may be time for a replacement."
+                answer: [
+                  "Signs that you may need a new water heater include:",
+                  "Age: Most traditional water heaters last 8-12 years. If yours is older, it may be time for a replacement.",
+                  "Inefficiency: Rising energy bills or inconsistent water temperature could indicate that your unit is not working efficiently.",
+                  "Leaks: Visible water leaks around your water heater are a clear sign of trouble.",
+                  "Rusty Water: Discolored water from your taps may signal corrosion inside the tank.",
+                  "Frequent Repairs: If you're calling for repairs more often, a replacement might be more cost-effective."
+                ]
               },
               {
                 question: "What are the benefits of upgrading to a tankless water heater?",
-                answer: "Tankless water heaters offer energy efficiency, space-saving design, unlimited hot water supply, and typically have a longer lifespan than traditional models."
+                answer: [
+                  "Tankless water heaters provide several advantages:",
+                  "Energy Efficiency: They heat water on demand, reducing energy waste.",
+                  "Space-Saving Design: Compact units free up storage space in your home.",
+                  "Unlimited Hot Water: Enjoy continuous hot water, even during high-demand periods.",
+                  "Longer Lifespan: Tankless models often last longer than traditional tank water heaters."
+                ]
               },
               {
                 question: "How long does it take to install a water heater?",
-                answer: "Traditional tank models typically take 2-3 hours, while tankless models may take 4-6 hours or longer due to additional requirements."
+                answer: [
+                  "The installation time depends on the type of water heater and the complexity of the job:",
+                  "Traditional Tank Models: Typically take 2-3 hours for a straightforward installation.",
+                  "Tankless Models: May take 4-6 hours or longer due to additional electrical or gas line requirements."
+                ]
               },
               {
-                question: "How can I maintain my water heater?",
-                answer: "Regular maintenance includes annual tank flushing, anode rod inspection, leak checks, and professional inspections to ensure optimal performance."
+                question: "What should I do if my water heater stops working?",
+                answer: [
+                  "If your water heater stops working:",
+                  "Check the Power Source: Ensure the unit is receiving power or gas.",
+                  "Inspect the Thermostat: Adjust the temperature settings to see if that resolves the issue.",
+                  "Contact a Professional: If troubleshooting doesn't work, call Melville's Plumbing for expert repair services."
+                ]
+              },
+              {
+                question: "How can I maintain my water heater to extend its lifespan?",
+                answer: [
+                  "Regular maintenance can significantly extend your water heater's lifespan:",
+                  "Flush the Tank: Remove sediment buildup annually to improve efficiency.",
+                  "Inspect the Anode Rod: Replace it if it shows significant wear to prevent tank corrosion.",
+                  "Check for Leaks: Regularly inspect for signs of water leakage.",
+                  "Schedule Professional Maintenance: Our team provides thorough inspections and tune-ups to keep your unit running smoothly."
+                ]
               }
             ].map((faq, index) => (
-              <Card key={index} className="p-8 hover:shadow-lg transition-shadow">
+              <Card key={index} className="p-6">
                 <h3 className="text-xl font-semibold mb-4">{faq.question}</h3>
-                <p className="text-gray-600">{faq.answer}</p>
+                <div className="space-y-2">
+                  {faq.answer.map((line, lineIndex) => (
+                    <p key={lineIndex} className="text-gray-600">{line}</p>
+                  ))}
+                </div>
               </Card>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="text-center py-16 bg-primary text-white rounded-lg mb-16">
-          <div className="max-w-3xl mx-auto px-4">
+      {/* Service Area Section */}
+      <section className="py-16 bg-gradient-to-b from-blue-50 to-white">
+        <div className="container mx-auto px-4">
+          <Card className="p-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+              Serving Windsor and Surrounding Areas
+            </h2>
+            <p className="text-gray-600 text-center">
+              At Melville's Plumbing, we proudly serve Windsor, Tecumseh, LaSalle, Amherstburg, and beyond. Our team understands the unique plumbing needs of our community and provides personalized solutions to meet them.
+            </p>
+          </Card>
+        </div>
+      </section>
+
+      {/* Standard CTA Section */}
+      <section className="py-16 bg-primary text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">
-              Ready for Expert Water Heater Service?
+              Ready to Service Your Water Heater?
             </h2>
             <p className="text-xl opacity-90 mb-8">
-              Don't let water heater issues disrupt your daily life. Contact us today for professional installation, repair, or maintenance services.
+              Contact Melville's Plumbing today for expert water heater services in Windsor.
             </p>
             <Button 
               size="xxl"
               variant="secondary"
-              className="group"
+              className="group text-white"
               asChild
             >
               <Link to="/contact">
-                Get Started Today
+                Get In Touch
                 <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </ServicePageLayout>
   );
 };
