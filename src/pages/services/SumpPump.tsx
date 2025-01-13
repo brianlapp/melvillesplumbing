@@ -268,7 +268,8 @@ const SumpPumpPage = () => {
               Don't wait until it's too late. Protect your home from water damage with professional sump pump installation and maintenance. Contact Melville's Plumbing today to schedule a consultation or service appointment.
             </p>
             <Button 
-              size="lg" 
+              size="xl"
+              variant="secondary"
               className="group"
               asChild
             >
