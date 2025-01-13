@@ -1,7 +1,7 @@
 import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, CheckCircle2, Tool, AlertCircle, Search, Clock, Shield } from "lucide-react";
+import { ArrowRight, CheckCircle2, Settings, AlertCircle, Search, Clock, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -40,9 +40,9 @@ const LeakDetectionPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {[
                 { title: "Initial Assessment", icon: Search },
-                { title: "Leak Detection", icon: Tool },
+                { title: "Leak Detection", icon: Settings },
                 { title: "Repair Solutions", icon: AlertCircle },
-                { title: "Professional Repairs", icon: Wrench },
+                { title: "Professional Repairs", icon: Settings },
                 { title: "Post-Repair Testing", icon: CheckCircle2 }
               ].map((step, index) => (
                 <Card key={index} className="p-6 text-center hover:shadow-lg transition-all">
@@ -117,7 +117,7 @@ const LeakDetectionPage = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { title: "State-of-the-Art Technology", icon: Tool, description: "We use advanced equipment to detect even the most hidden leaks without unnecessary disruption to your property." },
+                { title: "State-of-the-Art Technology", icon: Settings, description: "We use advanced equipment to detect even the most hidden leaks without unnecessary disruption to your property." },
                 { title: "Experienced Professionals", icon: Shield, description: "Our team has been serving Windsor since 2012, providing reliable and honest plumbing solutions." },
                 { title: "Prompt Service", icon: Clock, description: "We understand the urgency of a leak, which is why we respond quickly to prevent further damage." },
                 { title: "Comprehensive Solutions", icon: CheckCircle2, description: "From detection to repair, we handle every step of the process seamlessly." }
@@ -239,27 +239,27 @@ const LeakDetectionPage = () => {
       </section>
 
       {/* Keep existing contact CTA and footer */}
-        <section className="text-center py-8 md:py-16 bg-primary text-white rounded-lg mb-8 md:mb-16 px-4 md:px-0">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
-              Suspect a Leak? Don't Wait!
-            </h2>
-            <p className="text-lg md:text-xl opacity-90 mb-6 md:mb-8">
-              Contact Melville's Plumbing today for fast, reliable leak detection and repair services.
-            </p>
-            <Button 
-              size="lg"
-              variant="secondary"
-              className="group text-lg md:text-2xl px-6 md:px-12 py-6 md:py-8 w-full md:w-auto"
-              asChild
-            >
-              <Link to="/contact">
-                Get Expert Help Now
-                <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-          </div>
-        </section>
+      <section className="text-center py-8 md:py-16 bg-primary text-white rounded-lg mb-8 md:mb-16 px-4 md:px-0">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">
+            Suspect a Leak? Don't Wait!
+          </h2>
+          <p className="text-lg md:text-xl opacity-90 mb-6 md:mb-8">
+            Contact Melville's Plumbing today for fast, reliable leak detection and repair services.
+          </p>
+          <Button 
+            size="lg"
+            variant="secondary"
+            className="group text-lg md:text-2xl px-6 md:px-12 py-6 md:py-8 w-full md:w-auto"
+            asChild
+          >
+            <Link to="/contact">
+              Get Expert Help Now
+              <ArrowRight className="ml-2 h-5 w-5 md:h-6 md:w-6 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
+        </div>
+      </section>
     </ServicePageLayout>
   );
 };
