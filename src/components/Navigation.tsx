@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, Phone, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, ChevronRight, LayoutGrid } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -16,34 +16,89 @@ export const Navigation = () => {
 
   const services = [
     {
-      category: "Emergency & Safety",
+      category: "View All Services",
       items: [
-        { name: "Emergency Plumbing", path: "/services/emergency-plumbing" },
-        { name: "Leak Detection", path: "/services/leak-detection" },
-        { name: "Backflow Prevention", path: "/services/backflow-prevention" },
+        { 
+          name: "Services Overview", 
+          path: "/services",
+          icon: LayoutGrid,
+          description: "Browse our complete range of plumbing services"
+        },
       ]
     },
     {
-      category: "Installation & Repair",
+      category: "Emergency & Installation",
       items: [
-        { name: "Water Heater Services", path: "/services/water-heater" },
-        { name: "Fixture Installation", path: "/services/fixture-installation" },
-        { name: "Pipe Repair", path: "/services/pipe-repair" },
+        { 
+          name: "Emergency Plumbing", 
+          path: "/services/emergency-plumbing",
+          description: "24/7 emergency plumbing services"
+        },
+        { 
+          name: "Water Heater Services", 
+          path: "/services/water-heater",
+          description: "Installation and repair services"
+        },
+        { 
+          name: "Fixture Installation", 
+          path: "/services/fixture-installation",
+          description: "Professional fixture installations"
+        },
       ]
     },
     {
-      category: "Maintenance & Cleaning",
+      category: "Maintenance & Repair",
       items: [
-        { name: "Drain Cleaning", path: "/services/drain-cleaning" },
-        { name: "Sewer Line Services", path: "/services/sewer-line" },
-        { name: "Sump Pump Services", path: "/services/sump-pump" },
+        { 
+          name: "Leak Detection", 
+          path: "/services/leak-detection",
+          description: "Advanced leak detection services"
+        },
+        { 
+          name: "Pipe Repair", 
+          path: "/services/pipe-repair",
+          description: "Expert pipe repair solutions"
+        },
+        { 
+          name: "Drain Cleaning", 
+          path: "/services/drain-cleaning",
+          description: "Professional drain cleaning"
+        },
       ]
     },
     {
-      category: "Construction & Renovation",
+      category: "Specialized Services",
       items: [
-        { name: "New Construction", path: "/services/new-construction" },
-        { name: "Bathroom & Kitchen", path: "/services/bathroom-kitchen" },
+        { 
+          name: "Sewer Line Services", 
+          path: "/services/sewer-line",
+          description: "Complete sewer line solutions"
+        },
+        { 
+          name: "Backflow Prevention", 
+          path: "/services/backflow-prevention",
+          description: "Backflow testing and installation"
+        },
+        { 
+          name: "Sump Pump Services", 
+          path: "/services/sump-pump",
+          description: "Installation and maintenance"
+        },
+      ]
+    },
+    {
+      category: "Construction",
+      items: [
+        { 
+          name: "New Construction", 
+          path: "/services/new-construction",
+          description: "New construction plumbing"
+        },
+        { 
+          name: "Bathroom & Kitchen", 
+          path: "/services/bathroom-kitchen",
+          description: "Remodeling and upgrades"
+        },
       ]
     },
   ];
@@ -88,13 +143,13 @@ export const Navigation = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent 
                 align="end" 
-                className="w-72 bg-white p-2"
+                className="w-80 bg-white p-2"
                 sideOffset={8}
               >
                 {services.map((category, index) => (
                   <div key={category.category}>
-                    {index > 0 && <DropdownMenuSeparator />}
-                    <div className="px-2 py-1.5 text-sm font-semibold text-gray-500">
+                    {index > 0 && <DropdownMenuSeparator className="my-2" />}
+                    <div className="px-2 py-1.5 text-sm font-semibold text-primary">
                       {category.category}
                     </div>
                     {category.items.map((service) => (
@@ -104,10 +159,18 @@ export const Navigation = () => {
                       >
                         <Link
                           to={service.path}
-                          className="flex items-center px-2 py-1.5 w-full hover:text-primary transition-colors"
+                          className="flex items-start px-2 py-2 w-full hover:text-primary transition-colors"
                         >
-                          <span>{service.name}</span>
-                          <ChevronRight className="ml-auto h-4 w-4 opacity-50" />
+                          <div>
+                            <div className="flex items-center">
+                              {service.icon && <service.icon className="h-4 w-4 mr-2" />}
+                              <span className="font-medium">{service.name}</span>
+                            </div>
+                            <p className="text-xs text-gray-500 mt-0.5">
+                              {service.description}
+                            </p>
+                          </div>
+                          <ChevronRight className="ml-auto h-4 w-4 opacity-50 self-center" />
                         </Link>
                       </DropdownMenuItem>
                     ))}
@@ -156,16 +219,24 @@ export const Navigation = () => {
                 
                 {services.map((category) => (
                   <div key={category.category} className="space-y-1">
-                    <div className="px-4 py-2 text-sm font-semibold text-gray-500">
+                    <div className="px-4 py-2 text-sm font-semibold text-primary">
                       {category.category}
                     </div>
                     {category.items.map((service) => (
                       <Link key={service.path} to={service.path} className="block">
                         <Button
                           variant="ghost"
-                          className="w-full text-left justify-start pl-8 text-sm"
+                          className="w-full text-left justify-start pl-8"
                         >
-                          {service.name}
+                          <div>
+                            <div className="flex items-center">
+                              {service.icon && <service.icon className="h-4 w-4 mr-2" />}
+                              <span>{service.name}</span>
+                            </div>
+                            <p className="text-xs text-gray-500 mt-0.5 pl-6">
+                              {service.description}
+                            </p>
+                          </div>
                         </Button>
                       </Link>
                     ))}
