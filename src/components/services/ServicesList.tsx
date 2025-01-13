@@ -79,7 +79,9 @@ export const ServicesList = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-block mx-auto bg-secondary text-secondary-foreground px-6 py-2 rounded-full text-lg font-semibold mb-12"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="inline-block mx-auto bg-secondary text-secondary-foreground px-4 py-1.5 rounded-full text-base font-semibold mb-12"
         >
           Our Professional Plumbing Services
         </motion.div>
