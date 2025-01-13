@@ -1,7 +1,7 @@
 import { ServicePageLayout } from "@/components/services/ServicePageLayout";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Contact } from "@/components/Contact";
@@ -14,7 +14,6 @@ const SumpPumpPage = () => {
       backgroundImage="/heros/sump-pump-service.png"
     >
       <div className="container mx-auto px-4 py-20">
-        {/* What is a Sump Pump Section */}
         <motion.section 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -216,24 +215,69 @@ const SumpPumpPage = () => {
           </div>
         </motion.section>
 
-        {/* Final CTA */}
+        {/* Why Choose Us & Service Area Section */}
         <motion.section 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center"
+          className="mb-20"
         >
-          <Button 
-            size="lg" 
-            className="group"
-            asChild
-          >
-            <Link to="/contact">
-              Get In Touch
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+            Why Choose Melville's Plumbing?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+            {[
+              {
+                title: "Experience",
+                description: "Over a decade of expertise in plumbing and drainage solutions."
+              },
+              {
+                title: "Local Knowledge",
+                description: "We understand Windsor's unique weather and soil conditions."
+              },
+              {
+                title: "Quality Service",
+                description: "Our team is committed to delivering reliable, high-quality work."
+              },
+              {
+                title: "Customer Satisfaction",
+                description: "We're dedicated to ensuring your home is safe and dry."
+              }
+            ].map((item, index) => (
+              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold mb-2 text-primary">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </Card>
+            ))}
+          </div>
+
+          <div className="max-w-4xl mx-auto bg-blue-50 rounded-lg p-8 mb-16">
+            <h3 className="text-2xl font-bold text-center mb-6">Serving Windsor and Beyond</h3>
+            <div className="flex items-start gap-4 justify-center mb-4">
+              <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+              <p className="text-gray-600 text-center">
+                Melville's Plumbing proudly serves Windsor and the surrounding communities, including Tecumseh, LaSalle, Lakeshore, and Amherstburg. Our local expertise ensures tailored solutions for your property's needs.
+              </p>
+            </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-bold mb-4">Contact Us for Sump Pump Services</h3>
+            <p className="text-gray-600 mb-8">
+              Don't wait until it's too late. Protect your home from water damage with professional sump pump installation and maintenance. Contact Melville's Plumbing today to schedule a consultation or service appointment.
+            </p>
+            <Button 
+              size="lg" 
+              className="group"
+              asChild
+            >
+              <Link to="/contact">
+                Get In Touch
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          </div>
         </motion.section>
       </div>
 
