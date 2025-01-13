@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Contact } from "@/components/Contact";
 
 const SumpPumpPage = () => {
   return (
@@ -235,6 +236,9 @@ const SumpPumpPage = () => {
           </Button>
         </motion.section>
       </div>
+
+      {/* Contact Component */}
+      <Contact />
     </ServicePageLayout>
   );
 };
