@@ -67,7 +67,8 @@ const SumpPumpPage = () => {
           </div>
           <div className="text-center mt-12">
             <Button 
-              size="lg" 
+              size="xl" 
+              variant="secondary"
               className="group"
               asChild
             >
