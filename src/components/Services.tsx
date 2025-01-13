@@ -14,8 +14,8 @@ export const Services = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
-            Comprehensive Plumbing Services in Windsor
+          <h2 className="inline-block bg-secondary text-white px-6 py-2 rounded-full text-2xl md:text-4xl font-bold mb-4">
+            Our Professional Plumbing Services
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto mb-6 md:mb-8">
             Welcome to the Melville's Plumbing Services page! As Windsor's trusted plumbing experts, 
