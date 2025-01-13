@@ -143,7 +143,7 @@ export const Navigation = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent 
                 align="end" 
-                className="w-80 bg-white p-2"
+                className="w-80 bg-white p-2 max-h-[calc(100vh-80px)] overflow-y-auto"
                 sideOffset={8}
               >
                 {services.map((category, index) => (
