@@ -5,27 +5,41 @@ import { useEffect, useState } from "react";
 
 export const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
   const heroImageUrl = "/lovable-uploads/hero-3.png";
+  const fallbackImageUrl = "/lovable-uploads/hero-2.jpg"; // Using another image as fallback
   
   useEffect(() => {
+    // Reset states when URL changes
+    setImageLoaded(false);
+    setImageError(false);
+
     // Preload the hero image
     const link = document.createElement('link');
     link.rel = 'preload';
     link.as = 'image';
-    link.href = heroImageUrl;
+    link.href = imageError ? fallbackImageUrl : heroImageUrl;
     document.head.appendChild(link);
 
     // Create an image object to track loading
     const img = new Image();
-    img.src = heroImageUrl;
+    img.src = imageError ? fallbackImageUrl : heroImageUrl;
+    
     img.onload = () => {
       setImageLoaded(true);
+    };
+
+    img.onerror = () => {
+      console.error('Error loading primary image, falling back to secondary image');
+      setImageError(true);
     };
 
     return () => {
       document.head.removeChild(link);
     };
-  }, []);
+  }, [imageError]); // Re-run when imageError changes
+
+  const currentImageUrl = imageError ? fallbackImageUrl : heroImageUrl;
 
   return (
     <section 
@@ -48,7 +62,7 @@ export const Hero = () => {
         className="absolute inset-0 transition-opacity duration-500"
         style={{
           opacity: imageLoaded ? 1 : 0,
-          backgroundImage: `url("${heroImageUrl}")`,
+          backgroundImage: `url("${currentImageUrl}")`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
