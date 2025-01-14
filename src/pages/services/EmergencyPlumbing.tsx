@@ -137,6 +137,31 @@ const EmergencyPlumbingPage = () => {
           </div>
         </section>
 
+        {/* Service Area Section */}
+        <section className="mb-20 bg-primary text-white rounded-lg p-8">
+          <h2 className="text-3xl font-bold mb-6 text-center">
+            Serving Windsor and Beyond
+          </h2>
+          <p className="text-lg text-center mb-8 max-w-3xl mx-auto">
+            Melville's Plumbing proudly serves Windsor and neighboring areas, including Tecumseh, 
+            LaSalle, Lakeshore, Amherstburg, and more. Our local presence ensures we understand 
+            the unique plumbing challenges faced by our community.
+          </p>
+          <div className="text-center">
+            <Button 
+              size="lg" 
+              variant="secondary"
+              className="group"
+              asChild
+            >
+              <Link to="/contact">
+                Get In Touch
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          </div>
+        </section>
+
         {/* Why Choose Us Section */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
@@ -184,7 +209,7 @@ const EmergencyPlumbingPage = () => {
         </section>
 
         {/* Common Emergencies Section */}
-        <section className="mb-20 bg-gray-50 p-8 rounded-lg">
+        <section className="mb-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Common Plumbing Emergencies We Handle
           </h2>
@@ -256,31 +281,7 @@ const EmergencyPlumbingPage = () => {
           </div>
         </section>
 
-        {/* Service Area Section */}
-        <section className="mb-20 bg-primary text-white rounded-lg p-8">
-          <h2 className="text-3xl font-bold mb-6 text-center">
-            Serving Windsor and Beyond
-          </h2>
-          <p className="text-lg text-center mb-8 max-w-3xl mx-auto">
-            Melville's Plumbing proudly serves Windsor and neighboring areas, including Tecumseh, 
-            LaSalle, Lakeshore, Amherstburg, and more. Our local presence ensures we understand 
-            the unique plumbing challenges faced by our community.
-          </p>
-          <div className="text-center">
-            <Button 
-              size="lg" 
-              variant="secondary"
-              className="group"
-              asChild
-            >
-              <Link to="/contact">
-                Get In Touch
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-          </div>
-        </section>
-
+        {/* CTA Section */}
         <section className="py-16 md:py-24 bg-primary text-white rounded-lg">
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl font-bold mb-6">
