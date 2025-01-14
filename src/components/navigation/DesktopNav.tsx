@@ -9,10 +9,11 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { navigationServices } from "@/constants/services";
+import { type NavigationProps } from "@/types/navigation";
 
-export const DesktopNav = () => {
+export const DesktopNav = ({ className }: NavigationProps) => {
   return (
-    <div className="hidden md:flex items-center space-x-4">
+    <div className={`hidden md:flex items-center space-x-4 ${className || ''}`}>
       <Link to="/">
         <Button variant="ghost">Home</Button>
       </Link>

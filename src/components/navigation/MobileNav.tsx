@@ -4,13 +4,14 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { navigationServices } from "@/constants/services";
+import { type NavigationProps } from "@/types/navigation";
 
-export const MobileNav = () => {
+export const MobileNav = ({ className }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <div className="w-10 md:hidden">
+      <div className={`w-10 md:hidden ${className || ''}`}>
         <Button
           variant="ghost"
           className="md:hidden"

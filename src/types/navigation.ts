@@ -1,3 +1,5 @@
+import { type ComponentProps } from "react";
+
 export interface ServiceItem {
   name: string;
   path: string;
@@ -10,6 +12,6 @@ export interface ServiceCategory {
   items: ServiceItem[];
 }
 
-export interface NavigationProps {
+export type NavigationProps = ComponentProps<"nav"> & {
   className?: string;
 }
