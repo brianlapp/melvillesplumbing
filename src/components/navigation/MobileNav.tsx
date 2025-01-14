@@ -45,12 +45,9 @@ export const MobileNav: FC<NavigationProps> = ({ className, ...props }) => {
               top: '4rem',
               backgroundColor: 'white',
               boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
-              zIndex: 50,
-              display: 'block',
-              '@media (min-width: 768px)': {
-                display: 'none'
-              }
+              zIndex: 50
             }}
+            className="block md:hidden"
           >
             <div className="py-4 space-y-2">
               <Link to="/" className="block">
