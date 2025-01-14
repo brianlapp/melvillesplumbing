@@ -75,10 +75,28 @@ export const ServicePageLayout = ({
         "longitude": "-83.0364"
       },
       "url": "https://melvillesplumbing.ca",
-      "telephone": "226-820-2394"
+      "telephone": "226-820-2394",
+      "priceRange": "$$",
+      "areaServed": ["Windsor", "Tecumseh", "LaSalle", "Amherstburg"]
     },
     "areaServed": ["Windsor", "Tecumseh", "LaSalle", "Amherstburg"],
-    "url": currentUrl
+    "url": currentUrl,
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://melvillesplumbing.ca/contact",
+        "inLanguage": "en-CA",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform"
+        ]
+      },
+      "result": {
+        "@type": "Reservation",
+        "name": "Plumbing Service Appointment"
+      }
+    }
   };
 
   // Generate FAQ schema if FAQs are present
@@ -110,6 +128,8 @@ export const ServicePageLayout = ({
         <meta property="og:title" content={`${title} | Melville's Plumbing Windsor`} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={imageUrl} />
+        <meta property="og:site_name" content="Melville's Plumbing" />
+        <meta property="og:locale" content="en_CA" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -123,6 +143,8 @@ export const ServicePageLayout = ({
         <meta name="author" content="Reis Melville" />
         <meta name="geo.region" content="CA-ON" />
         <meta name="geo.placename" content="Windsor" />
+        <meta name="geo.position" content="42.3149;-83.0364" />
+        <meta name="ICBM" content="42.3149, -83.0364" />
         
         {/* Schema.org JSON-LD */}
         <script type="application/ld+json">
@@ -146,6 +168,8 @@ export const ServicePageLayout = ({
         style={{
           backgroundImage: `url("${backgroundImage}")`,
         }}
+        role="banner"
+        aria-label={title}
       >
         <div className="absolute inset-0 bg-primary/70" />
         
