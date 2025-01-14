@@ -38,7 +38,7 @@ export const MobileNav: FC<NavigationProps> = ({ className, ...props }) => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden overflow-hidden"
+            className="fixed left-0 right-0 top-16 bg-white shadow-lg z-50 md:hidden"
           >
             <div className="py-4 space-y-2">
               <Link to="/" className="block">
