@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { navigationServices } from "@/constants/services";
 import { type NavigationProps } from "@/types/navigation";
+import { FC } from "react";
 
-export const MobileNav = ({ className }: NavigationProps) => {
+export const MobileNav: FC<NavigationProps> = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

@@ -10,8 +10,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { navigationServices } from "@/constants/services";
 import { type NavigationProps } from "@/types/navigation";
+import { FC } from "react";
 
-export const DesktopNav = ({ className }: NavigationProps) => {
+export const DesktopNav: FC<NavigationProps> = ({ className }) => {
   return (
     <div className={`hidden md:flex items-center space-x-4 ${className || ''}`}>
       <Link to="/">
