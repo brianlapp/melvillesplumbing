@@ -4,7 +4,7 @@ import { Contact } from "@/components/Contact";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { CheckCircle2, Phone, Mail, ArrowRight } from "lucide-react";
+import { CheckCircle2, Phone, Mail, ArrowRight, AlertTriangle, Info } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const EmergencyPlumbingPage = () => {
@@ -20,7 +20,6 @@ const EmergencyPlumbingPage = () => {
     >
       <Navigation />
       
-      {/* Hero Section */}
       <section 
         className="relative min-h-[30vh] flex items-center justify-center overflow-hidden bg-cover bg-center"
         style={{
@@ -138,7 +137,150 @@ const EmergencyPlumbingPage = () => {
           </div>
         </section>
 
-        {/* Contact CTA Section */}
+        {/* Why Choose Us Section */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Why Choose Melville's Plumbing for Emergency Services?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Experienced Team",
+                description: "With over a decade of expertise, we've seen and solved every plumbing emergency imaginable."
+              },
+              {
+                title: "24/7 Availability",
+                description: "No matter the time of day or night, we're ready to assist."
+              },
+              {
+                title: "Fast Response",
+                description: "We prioritize emergencies to minimize damage and restore functionality."
+              },
+              {
+                title: "State-of-the-Art Equipment",
+                description: "Our tools and techniques ensure efficient and long-lasting solutions."
+              },
+              {
+                title: "Customer-Centric Approach",
+                description: "Your satisfaction and safety are our top priorities."
+              }
+            ].map((item, index) => (
+              <Card key={index} className="p-6">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-xl mb-2 text-primary">{item.title}</h3>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Button size="lg" asChild>
+              <Link to="/contact">Get In Touch</Link>
+            </Button>
+          </div>
+        </section>
+
+        {/* Common Emergencies Section */}
+        <section className="mb-20 bg-gray-50 p-8 rounded-lg">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Common Plumbing Emergencies We Handle
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Burst Pipes",
+                description: "Sudden pipe bursts can lead to flooding and structural damage. We provide swift repairs to prevent further harm."
+              },
+              {
+                title: "Clogged Drains and Toilets",
+                description: "Severe clogs can disrupt your daily activities. We use advanced tools to clear blockages and restore flow."
+              },
+              {
+                title: "Water Heater Failures",
+                description: "A broken water heater can leave you without hot water. Our experts repair or replace units to restore comfort."
+              },
+              {
+                title: "Leaking Fixtures",
+                description: "Dripping faucets or leaking pipes can waste water and increase bills. We identify and fix leaks quickly."
+              },
+              {
+                title: "Sewer Backups",
+                description: "Wastewater entering your property is a health hazard. We provide comprehensive sewer line services to resolve the issue."
+              }
+            ].map((item, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="font-semibold text-xl mb-3 text-primary">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Emergency Tips Section */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            Tips to Minimize Damage During an Emergency
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Know Your Plumbing System",
+                description: "Familiarize yourself with the location of the main shut-off valve and other critical components."
+              },
+              {
+                title: "Keep Emergency Supplies Handy",
+                description: "Stock up on buckets, towels, and a basic plumbing repair kit."
+              },
+              {
+                title: "Act Quickly",
+                description: "The faster you address an issue, the less damage it's likely to cause."
+              },
+              {
+                title: "Avoid DIY Repairs",
+                description: "Temporary fixes can worsen the problem. Always rely on professional plumbers."
+              }
+            ].map((tip, index) => (
+              <Card key={index} className="p-6">
+                <div className="flex items-start gap-3">
+                  <Info className="w-5 h-5 text-secondary flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-semibold text-xl mb-2 text-primary">{tip.title}</h3>
+                    <p className="text-gray-600">{tip.description}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Service Area Section */}
+        <section className="mb-20 bg-primary text-white rounded-lg p-8">
+          <h2 className="text-3xl font-bold mb-6 text-center">
+            Serving Windsor and Beyond
+          </h2>
+          <p className="text-lg text-center mb-8 max-w-3xl mx-auto">
+            Melville's Plumbing proudly serves Windsor and neighboring areas, including Tecumseh, 
+            LaSalle, Lakeshore, Amherstburg, and more. Our local presence ensures we understand 
+            the unique plumbing challenges faced by our community.
+          </p>
+          <div className="text-center">
+            <Button 
+              size="lg" 
+              variant="secondary"
+              className="group"
+              asChild
+            >
+              <Link to="/contact">
+                Get In Touch
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+          </div>
+        </section>
+
         <section className="py-16 md:py-24 bg-primary text-white rounded-lg">
           <div className="max-w-3xl mx-auto px-4">
             <h2 className="text-3xl font-bold mb-6">
