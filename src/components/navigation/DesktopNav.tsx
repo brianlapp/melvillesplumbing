@@ -12,9 +12,9 @@ import { navigationServices } from "@/constants/services";
 import { type NavigationProps } from "@/types/navigation";
 import { FC } from "react";
 
-export const DesktopNav: FC<NavigationProps> = ({ className }) => {
+export const DesktopNav: FC<NavigationProps> = ({ className, ...props }) => {
   return (
-    <div className={`hidden md:flex items-center space-x-4 ${className || ''}`}>
+    <div className={`hidden md:flex items-center space-x-4 ${className || ''}`} {...props}>
       <Link to="/">
         <Button variant="ghost">Home</Button>
       </Link>

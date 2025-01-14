@@ -7,12 +7,12 @@ import { navigationServices } from "@/constants/services";
 import { type NavigationProps } from "@/types/navigation";
 import { FC } from "react";
 
-export const MobileNav: FC<NavigationProps> = ({ className }) => {
+export const MobileNav: FC<NavigationProps> = ({ className, ...props }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <div className={`w-10 md:hidden ${className || ''}`}>
+      <div className={`w-10 md:hidden ${className || ''}`} {...props}>
         <Button
           variant="ghost"
           className="md:hidden"

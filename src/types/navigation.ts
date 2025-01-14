@@ -1,4 +1,4 @@
-import { type ComponentProps } from "react";
+import { type HTMLAttributes } from "react";
 
 export interface ServiceItem {
   name: string;
@@ -12,6 +12,4 @@ export interface ServiceCategory {
   items: ServiceItem[];
 }
 
-export type NavigationProps = ComponentProps<"nav"> & {
-  className?: string;
-}
+export type NavigationProps = HTMLAttributes<HTMLDivElement>;
