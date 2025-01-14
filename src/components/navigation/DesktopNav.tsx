@@ -25,41 +25,39 @@ export const DesktopNav: FC<NavigationProps> = ({ className, ...props }) => {
             <ChevronDown className="ml-2 h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent 
-          align="end" 
-          className="w-80 bg-white p-2 max-h-[calc(100vh-80px)] overflow-y-auto"
-          sideOffset={8}
-        >
-          {navigationServices.map((category, index) => (
-            <div key={category.category}>
-              {index > 0 && <DropdownMenuSeparator className="my-2" />}
-              <div className="px-2 py-1.5 text-sm font-semibold text-primary">
-                {category.category}
-              </div>
-              {category.items.map((service) => (
-                <DropdownMenuItem
-                  key={service.path}
-                  className="p-0 focus:bg-gray-50"
-                >
-                  <Link
-                    to={service.path}
-                    className="flex items-start px-2 py-2 w-full hover:text-primary transition-colors"
+        <DropdownMenuContent align="end">
+          <div className="w-80 bg-white p-2 max-h-[calc(100vh-80px)] overflow-y-auto">
+            {navigationServices.map((category, index) => (
+              <div key={category.category}>
+                {index > 0 && <DropdownMenuSeparator className="my-2" />}
+                <div className="px-2 py-1.5 text-sm font-semibold text-primary">
+                  {category.category}
+                </div>
+                {category.items.map((service) => (
+                  <DropdownMenuItem
+                    key={service.path}
+                    className="p-0 focus:bg-gray-50"
                   >
-                    <div>
-                      <div className="flex items-center">
-                        {service.icon && <service.icon className="h-4 w-4 mr-2" />}
-                        <span className="font-medium">{service.name}</span>
+                    <Link
+                      to={service.path}
+                      className="flex items-start px-2 py-2 w-full hover:text-primary transition-colors"
+                    >
+                      <div>
+                        <div className="flex items-center">
+                          {service.icon && <service.icon className="h-4 w-4 mr-2" />}
+                          <span className="font-medium">{service.name}</span>
+                        </div>
+                        <p className="text-xs text-gray-500 mt-0.5">
+                          {service.description}
+                        </p>
                       </div>
-                      <p className="text-xs text-gray-500 mt-0.5">
-                        {service.description}
-                      </p>
-                    </div>
-                    <ChevronRight className="ml-auto h-4 w-4 opacity-50 self-center" />
-                  </Link>
-                </DropdownMenuItem>
-              ))}
-            </div>
-          ))}
+                      <ChevronRight className="ml-auto h-4 w-4 opacity-50 self-center" />
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </div>
+            ))}
+          </div>
         </DropdownMenuContent>
       </DropdownMenu>
       <Link to="/about">

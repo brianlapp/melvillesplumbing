@@ -38,7 +38,19 @@ export const MobileNav: FC<NavigationProps> = ({ className, ...props }) => {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed left-0 right-0 top-16 bg-white shadow-lg z-50 md:hidden"
+            style={{
+              position: 'fixed',
+              left: 0,
+              right: 0,
+              top: '4rem',
+              backgroundColor: 'white',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+              zIndex: 50,
+              display: 'block',
+              '@media (min-width: 768px)': {
+                display: 'none'
+              }
+            }}
           >
             <div className="py-4 space-y-2">
               <Link to="/" className="block">
