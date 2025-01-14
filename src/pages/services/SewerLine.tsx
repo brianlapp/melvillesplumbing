@@ -13,8 +13,54 @@ const SewerLinePage = () => {
       backgroundImage="/heros/sewer-line-service.png"
     >
       <div className="container mx-auto px-4 pt-16">
-        {/* What Are Sewer Line Services Section */}
-        <section className="mb-16">
+        {/* New Why Choose Section with Light Blue Background */}
+        <section className="mb-16 py-16 bg-[#D3E4FD] rounded-lg">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Why Choose Melville's Plumbing for Sewer Line Services in Windsor?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  title: "Experience You Can Trust",
+                  description: "With over a decade of experience, we've handled sewer line issues of all sizes and complexities."
+                },
+                {
+                  title: "Advanced Technology",
+                  description: "Our team uses state-of-the-art equipment for accurate diagnostics and efficient repairs."
+                },
+                {
+                  title: "Customer-Centric Approach",
+                  description: "We prioritize your satisfaction, offering clear communication and reliable solutions."
+                },
+                {
+                  title: "Locally Owned & Operated",
+                  description: "As a Windsor-based business, we're committed to serving our community with integrity and excellence."
+                }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Card className="p-6 h-full bg-white">
+                    <div className="flex items-start gap-3">
+                      <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                        <p className="text-gray-600">{item.description}</p>
+                      </div>
+                    </div>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* What Are Sewer Line Services Section with Light Gray Background */}
+        <section className="mb-16 py-16 bg-[#F1F1F1] rounded-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             What Are Sewer Line Services?
           </h2>
@@ -27,8 +73,8 @@ const SewerLinePage = () => {
           </Card>
         </section>
 
-        {/* Our Services Section */}
-        <section className="mb-16">
+        {/* Our Services Section with Off-White Background */}
+        <section className="mb-16 py-16 bg-[#eee] rounded-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Our Sewer Line Services
           </h2>
@@ -71,8 +117,8 @@ const SewerLinePage = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="mb-16">
+        {/* FAQ Section with Soft Yellow Background */}
+        <section className="mb-16 py-16 bg-[#FEF7CD] rounded-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Top 5 Questions About Sewer Line Services
           </h2>
@@ -107,8 +153,8 @@ const SewerLinePage = () => {
           </div>
         </section>
 
-        {/* Prevention Tips Section */}
-        <section className="mb-16">
+        {/* Prevention Tips Section with Soft Green Background */}
+        <section className="mb-16 py-16 bg-[#F2FCE2] rounded-lg">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             How to Prevent Sewer Line Problems
           </h2>
